@@ -3,6 +3,7 @@ import React from 'react';
 import './Limits.css'; 
 
 import LimitDefinition from './LimitDefinition';
+import LimitLaws from './LimitLaws';
 import EpsilonDeltaProof from './EpsilonDeltaProof';
 import LimitTypes from './LimitTypes'; 
 import LimitsAtInfinity from './LimitsAtInfinity'; // 引入第4節
@@ -17,6 +18,7 @@ export default function Limits() {
       </header>
 
       <LimitDefinition />
+      <LimitLaws />
       <EpsilonDeltaProof />
       <LimitTypes /> 
       <LimitsAtInfinity />
