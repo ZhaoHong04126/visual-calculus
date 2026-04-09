@@ -1,0 +1,78 @@
+/* src/Functions/Functions.css */
+
+/* =========================================
+   1. 標題與基礎區塊
+========================================= */
+.topic-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.topic-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.subsection {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+  border-left: 4px solid var(--text-muted);
+  padding-left: 0.75rem;
+}
+
+/* =========================================
+   2. 概念對照卡片 (指數 vs 對數)
+========================================= */
+.concept-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.concept-card {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* 指數與 e 區塊 (使用淺綠色系) */
+.diff-card {
+  background-color: #f0fdf4;
+  border-left: 4px solid #22c55e;
+}
+
+/* 對數與自然對數區塊 (使用淺藍色系) */
+.int-card {
+  background-color: #eff6ff;
+  border-left: 4px solid #3b82f6;
+}
+
+/* =========================================
+   3. 數學重點公式區塊
+========================================= */
+.math-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin-top: 1.5rem;
+}
+
+/* =========================================
+   4. 響應式設計 (手機版自動垂直排列)
+========================================= */
+@media (max-width: 768px) {
+  .concept-grid {
+    flex-direction: column;
+  }
+}

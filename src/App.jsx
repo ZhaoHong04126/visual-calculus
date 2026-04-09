@@ -4,6 +4,7 @@ import './App.css';
 
 // 引入各個主題的進入點元件
 import Introduction from './Introduction/Introduction';
+import Functions from './Functions/Functions';
 import Limits from './Limits/Limits';
 // import Derivatives from './Derivatives/Derivatives';
 // import Integrals from './Integrals/Integrals';
@@ -32,8 +33,13 @@ export default function App() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/functions" className={({ isActive }) => isActive ? "active-link" : ""}>
+              第一章：微積分預備知識
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/limits" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第一章：極限與連續
+              第二章：極限與連續
             </NavLink>
           </li>
           {/* <li>
@@ -52,14 +58,14 @@ export default function App() {
       {/* 右側主要內容區 */}
       <main className="main-content">
         {/* 懸浮的選單切換按鈕 */}
-        <button className="toggle-btn" onClick={toggleSidebar}>
-          {isSidebarOpen ? '◀ 隱藏選單' : '☰ 展開選單'}
+        <button className="toggle-btn" onClick={toggleSidebar} title={isSidebarOpen ? '隱藏選單' : '展開選單'}>
+          {isSidebarOpen ? '❯' : '☰'} 
         </button>
 
         <div className="content-wrapper">
           <Routes>
             <Route path="/" element={<Introduction />} />
-            <Route path="/" element={<Introduction />} />
+            <Route path="/functions" element={<Functions />} />
             <Route path="/limits" element={<Limits />} />
             {/* <Route path="/derivatives" element={<Derivatives />} />
             <Route path="/integrals" element={<Integrals />} /> */}
