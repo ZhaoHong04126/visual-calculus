@@ -87,7 +87,11 @@ visual-calculus/
 │       ├── LimitsAtInfinity.jsx     # 無窮遠處的極限
 │       └── LimitTypes.jsx           # 單側極限與無窮極限
 │
+├── .gitignore              # Git 版本控制忽略清單
+├── eslint.config.js        # ESLint 程式碼品質檢查設定檔
 ├── index.html              # 網頁基礎模板
-├── package.json            # 專案依賴套件與指令 (包含 deploy 指令)
-└── vite.config.js          # Vite 打包與 GitHub Pages base 設定`
+├── package-lock.json       # npm 套件版本鎖定檔
+├── package.json            # 專案依賴套件與腳本指令 (包含 deploy)
+├── README.md               # 專案說明文件 (就是這份文件！)
+└── vite.config.js          # Vite 打包設定與 GitHub Pages base 基礎路徑
 ```

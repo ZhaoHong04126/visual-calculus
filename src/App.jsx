@@ -58,7 +58,7 @@ export default function App() {
       {/* 右側主要內容區 */}
       <main className="main-content">
         {/* 懸浮的選單切換按鈕 */}
-        <button className="toggle-btn" onClick={toggleSidebar} title={isSidebarOpen ? '隱藏選單' : '展開選單'}>
+        <button className={`toggle-btn ${isSidebarOpen ? 'shifted' : ''}`} onClick={toggleSidebar} title={isSidebarOpen ? '隱藏選單' : '展開選單'}>
           {isSidebarOpen ? '❯' : '☰'} 
         </button>
 

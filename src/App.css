@@ -1,7 +1,7 @@
 /* 基礎排版 */
 .app-container {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   overflow-x: hidden; /* 防止側邊欄收起時出現水平捲軸 */
 }
@@ -12,7 +12,8 @@
   background-color: #f8fafc;
   border-right: 1px solid #e2e8f0;
   flex-shrink: 0;
-  transition: margin-left 0.3s ease-in-out; /* 讓收合有滑順的動畫 */
+  transition: margin-left 0.3s ease-in-out;
+  overflow-y: auto; /* 新增：讓側邊欄內容過長時可獨立捲動 */
 }
 
 /* 展開狀態：正常顯示 */
@@ -72,12 +73,13 @@
   flex-direction: column;
   background-color: #ffffff;
   transition: width 0.3s ease-in-out;
+  height: 100%; /* 新增：確保高度不會超過父容器 */
 }
 
 .toggle-btn {
   position: fixed;
   top: 1.5rem;
-  right: 1.5rem;
+  left: 1.5px;
   width: 45px;
   height: 45px;
   display: flex;
@@ -90,7 +92,7 @@
   cursor: pointer;
   font-size: 1.2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 1000;
 }
 
@@ -100,16 +102,22 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+.toggle-btn.shifted {
+  /* 當展開時，把按鈕往右推：側邊欄的寬度 (260px) + 原本離邊緣的距離 (1.5rem) */
+  left: calc(260px + 1.5rem); 
+}
+
 /* 將原本內容區的 padding 移到內層，避免影響切換按鈕 */
 .content-wrapper {
-  padding: 3rem 3rem 3rem 4.5rem;
+  padding: 4rem 3rem 3rem 5rem; 
   overflow-y: auto;
   flex: 1;
 }
-/* 如果在手機版螢幕較小，左側留白可以稍微縮小 */
+
 @media (max-width: 768px) {
   .content-wrapper {
-    padding: 3.5rem 1.5rem 2rem 1.5rem; /* 手機版通常按鈕在最上方，內文往下推 */
+    /* 手機版同樣稍微把上方和左方空間拉大 */
+    padding: 4.5rem 1.5rem 2rem 1.5rem; 
   }
 }
 
