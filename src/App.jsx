@@ -6,7 +6,7 @@ import './App.css';
 import Introduction from './Introduction/Introduction';
 import Functions from './Functions/Functions';
 import Limits from './Limits/Limits';
-// import Derivatives from './Derivatives/Derivatives';
+import Derivatives from './Derivatives/Derivatives';
 // import Integrals from './Integrals/Integrals';
 
 export default function App() {
@@ -42,12 +42,12 @@ export default function App() {
               第二章：極限與連續
             </NavLink>
           </li>
-          {/* <li>
+           <li>
             <NavLink to="/derivatives" className={({ isActive }) => isActive ? "active-link" : ""}>
               第二章：微分學
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/integrals" className={({ isActive }) => isActive ? "active-link" : ""}>
               第三章：積分學
             </NavLink>
@@ -67,8 +67,8 @@ export default function App() {
             <Route path="/" element={<Introduction />} />
             <Route path="/functions" element={<Functions />} />
             <Route path="/limits" element={<Limits />} />
-            {/* <Route path="/derivatives" element={<Derivatives />} />
-            <Route path="/integrals" element={<Integrals />} /> */}
+            <Route path="/derivatives" element={<Derivatives />} />
+            {/* <Route path="/integrals" element={<Integrals />} /> */}
           </Routes>
         </div>
       </main>

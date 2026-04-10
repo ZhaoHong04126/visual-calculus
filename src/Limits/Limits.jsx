@@ -6,8 +6,9 @@ import LimitDefinition from './LimitDefinition';
 import LimitLaws from './LimitLaws';
 import EpsilonDeltaProof from './EpsilonDeltaProof';
 import LimitTypes from './LimitTypes'; 
-import LimitsAtInfinity from './LimitsAtInfinity'; // 引入第4節
-import Asymptotes from './Asymptotes';             // 引入第5節
+import LimitsAtInfinity from './LimitsAtInfinity'; 
+import Asymptotes from './Asymptotes';             
+import Continuity from './Continuity';
 
 export default function Limits() {
   return (
@@ -23,6 +24,8 @@ export default function Limits() {
       <LimitTypes /> 
       <LimitsAtInfinity />
       <Asymptotes />
+      <Continuity />
+
       
     </div>
   );
