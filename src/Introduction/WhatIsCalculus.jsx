@@ -1,6 +1,6 @@
 // src/Introduction/WhatIsCalculus.jsx
 import React from 'react';
-import { InlineMath, BlockMath } from 'react-katex';
+import { InlineMath, BlockMath } from '../components/Math';
 
 export default function WhatIsCalculus() {
   return (

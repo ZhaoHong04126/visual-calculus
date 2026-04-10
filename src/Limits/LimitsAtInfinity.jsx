@@ -1,6 +1,6 @@
 // src/Limits/LimitsAtInfinity.jsx
 import React from 'react';
-import { InlineMath, BlockMath } from 'react-katex';
+import { InlineMath, BlockMath } from '../components/Math';
 
 export default function LimitsAtInfinity() {
   return (
