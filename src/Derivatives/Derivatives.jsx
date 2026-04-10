@@ -1,7 +1,9 @@
 // src/Derivatives/Derivatives.jsx
 import React from 'react';
 import DerivativeDefinition from './DerivativeDefinition';
-// 這裡可以沿用第二章的 CSS 或是為第三章建立專屬的 Derivatives.css
+import DifferentiationRules from './DifferentiationRules';
+import ChainRule from './ChainRule';
+import HigherOrderDerivatives from './HigherOrderDerivatives';
 import '../Limits/Limits.css'; 
 
 export default function Derivatives() {
@@ -15,8 +17,10 @@ export default function Derivatives() {
       </header>
 
       <DerivativeDefinition />
+      <DifferentiationRules />
+      <ChainRule />
+      <HigherOrderDerivatives />
       
-      {/* 未來我們將在這裡加入更多小節，例如：微分法則、鏈鎖律、高階導數等 */}
     </div>
   );
 }
