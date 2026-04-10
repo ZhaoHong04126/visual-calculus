@@ -44,14 +44,14 @@ export default function WhatIsCalculus() {
           微分與積分看似探討不同的幾何現象（切線與面積），但實際上它們是一體的兩面，互為反運算。
         </p>
         <p>
-          我們可以透過一個極為基礎的函數來觀察這個奇妙的關聯：考慮常數函數 <InlineMath math="f(x) = 1" />。
+          我們可以透過一個極為基礎的函數來觀察這個奇妙的關聯：考慮常數函數 <InlineMath settings={{ strict: false }} math="f(x) = 1" />。
         </p>
         <ul className="mt-2 ml-4 list-disc">
-          <li><strong>從積分看：</strong> <InlineMath math="f(x) = 1" /> 在區間 <InlineMath math="[0, x]" /> 下累積的矩形面積為 <InlineMath math="1 \times x = x" />。我們令這個面積函數為 <InlineMath math="F(x) = x" />。</li>
-          <li><strong>從微分看：</strong> 現在觀察面積函數 <InlineMath math="F(x) = x" />，這是一條斜率恆為 <InlineMath math="1" /> 的直線。</li>
+          <li><strong>從積分看：</strong> <InlineMath settings={{ strict: false }} math="f(x) = 1" /> 在區間 <InlineMath settings={{ strict: false }} math="[0, x]" /> 下累積的矩形面積為 <InlineMath settings={{ strict: false }} math="1 \times x = x" />。我們令這個面積函數為 <InlineMath settings={{ strict: false }} math="F(x) = x" />。</li>
+          <li><strong>從微分看：</strong> 現在觀察面積函數 <InlineMath settings={{ strict: false }} math="F(x) = x" />，這是一條斜率恆為 <InlineMath settings={{ strict: false }} math="1" /> 的直線。</li>
         </ul>
         <p className="mt-4">
-          也就是說，「函數 <InlineMath math="f(x)" /> 的累積面積」求導（微分）後，剛好會變回原本的函數 <InlineMath math="f(x)" />。這正是貫穿整個學科的核心思想。
+          也就是說，「函數 <InlineMath settings={{ strict: false }} math="f(x)" /> 的累積面積」求導（微分）後，剛好會變回原本的函數 <InlineMath settings={{ strict: false }} math="f(x)" />。這正是貫穿整個學科的核心思想。
         </p>
       </div>
     </section>
