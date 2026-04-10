@@ -2,14 +2,14 @@
 
 這是一個專為大學微積分初學者打造的「互動式線上參考手冊」。揚棄傳統紙本講義的靜態限制，本專案結合了嚴謹的數學定義（$\epsilon-\delta$）與動態的幾何視覺化，幫助學習者直觀地理解微積分的核心概念。
 
-🌐 **[點此觀看線上版本](https://<你的GitHub帳號>.github.io/visual-calculus/)** *(請記得將網址替換為你真實的 GitHub Pages 連結)*
+🌐 **[點此觀看線上版本](https://visual-calculus.vercel.app/)**
 
 ---
 
 ## ✨ 專案特色 (Features)
 
 * **互動式視覺探索**：包含反函數的對稱性、極限的逼近過程、漸近線行為以及夾擠定理的動態展示，讓抽象數學幾何化。
-* **學術級公式渲染**：全面整合 `react-katex`，提供媲美教科書等級的 LaTeX 數學公式排版。
+* **學術級公式渲染**：全面改用自訂的 KaTeX 原生渲染元件，提供媲美教科書等級的 LaTeX 數學公式排版，並一勞永逸地解決中文（CJK）在嚴格模式下的衝突警告。
 * **現代化閱讀體驗**：採用「現代簡潔風」設計，具備舒適的留白、卡片化重點整理，以及便利的左上角懸浮導覽選單 (FAB)。
 * **響應式設計 (RWD)**：完美支援桌機與行動裝置的閱讀。
 
@@ -35,8 +35,8 @@
 * **前端框架**：React.js
 * **建置工具**：Vite
 * **路由管理**：React Router DOM
-* **數學公式排版**：KaTeX (`react-katex`)
-* **部署**：GitHub Pages (`gh-pages`)
+* **數學公式排版**：KaTeX (自訂無警告封裝元件 `Math.jsx`)
+* **部署平台**：Vercel (支援 GitHub Actions / Pages 等)
 
 ## 🚀 本地端執行 (Local Development)
 
@@ -56,6 +56,7 @@ visual-calculus/
 ├── public/                 # 靜態資源
 ├── src/
 │   ├── assets/             # 圖片或其他共用資源
+│   ├── components/         # 共用元件 (如修正警告的 Math.jsx)
 │   ├── App.jsx             # 網站主入口：側邊欄導覽列與路由設定 (Routes)
 │   ├── App.css             # 全域樣式：雙欄獨立捲動、懸浮按鈕 (FAB) 等設定
 │   ├── main.jsx            # React 掛載點
@@ -91,7 +92,7 @@ visual-calculus/
 ├── eslint.config.js        # ESLint 程式碼品質檢查設定檔
 ├── index.html              # 網頁基礎模板
 ├── package-lock.json       # npm 套件版本鎖定檔
-├── package.json            # 專案依賴套件與腳本指令 (包含 deploy)
+├── package.json            # 專案依賴套件與腳本指令
 ├── README.md               # 專案說明文件 (就是這份文件！)
-└── vite.config.js          # Vite 打包設定與 GitHub Pages base 基礎路徑
+└── vite.config.js          # Vite 打包配置與服務設定
 ```
