@@ -5,20 +5,20 @@ import './Limits.css';
 export default function LimitTypes() {
   return (
     <section className="subsection mt-12">
-      <h2 className="section-title text-2xl font-bold mb-4 border-b-2 border-emerald-500 pb-2">3. 極限的種類：單側極限與無窮極限</h2>
+      <h2 className="section-title text-2xl font-bold mb-4 border-b-2 border-emerald-500 pb-2">4. 極限的種類：單側極限與無窮極限</h2>
       
-      {/* 3.1 單側極限 */}
+      {/* 4.1 單側極限 */}
       <div className="content-block">
-        <h3 className="text-xl font-bold mb-3 text-blue-800">3.1 單側極限 (One-Sided Limits)</h3>
+        <h3 className="text-xl font-bold mb-3 text-blue-800">4.1 單側極限 (One-Sided Limits)</h3>
         <p className="mb-4 text-gray-700">
           有時候函數在某一點的行為取決於我們是從左側還是右側靠近。
         </p>
         
         <div className="math-box mb-6 p-6 bg-gray-50 rounded-lg shadow-sm border border-gray-200">
-          <p className="mb-2"><strong>3.1.1 右極限：</strong>從右側（大於 <InlineMath settings={{ strict: false }} math="a" /> 的方向）靠近</p>
+          <p className="mb-2"><strong>4.1.1 右極限：</strong>從右側（大於 <InlineMath settings={{ strict: false }} math="a" /> 的方向）靠近</p>
           <BlockMath settings={{ strict: false }} math="\lim_{x \to a^+} f(x) = L" />
           
-          <p className="mt-4 mb-2"><strong>3.1.2 左極限：</strong>從左側（小於 <InlineMath settings={{ strict: false }} math="a" /> 的方向）靠近</p>
+          <p className="mt-4 mb-2"><strong>4.1.2 左極限：</strong>從左側（小於 <InlineMath settings={{ strict: false }} math="a" /> 的方向）靠近</p>
           <BlockMath settings={{ strict: false }} math="\lim_{x \to a^-} f(x) = L" />
         </div>
 
@@ -32,9 +32,9 @@ export default function LimitTypes() {
         </div>
       </div>
 
-      {/* 3.2 無窮極限 */}
+      {/* 4.2 無窮極限 */}
       <div className="content-block mt-8">
-        <h3 className="text-xl font-bold mb-3 text-blue-800">3.2 無窮極限 (Infinite Limits)</h3>
+        <h3 className="text-xl font-bold mb-3 text-blue-800">4.2 無窮極限 (Infinite Limits)</h3>
         <p className="mb-4 text-gray-700">
           當 <InlineMath settings={{ strict: false }} math="x" /> 趨近某一點時，函數值 <InlineMath settings={{ strict: false }} math="f(x)" /> 可能會無限增大或減小。
         </p>

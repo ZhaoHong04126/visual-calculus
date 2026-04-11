@@ -25,7 +25,7 @@ const ProofBox = ({ title = "查看證明", children }) => {
 export default function Asymptotes() {
   return (
     <section className="subsection mt-12">
-      <h2 className="section-title text-2xl font-bold mb-4 border-b-2 border-emerald-500 pb-2">5. 漸近線 (Asymptotes) 與嚴格定義</h2>
+      <h2 className="section-title text-2xl font-bold mb-4 border-b-2 border-emerald-500 pb-2">6. 漸近線 (Asymptotes) 與嚴格定義</h2>
       
       <p className="mb-4 text-gray-700">
         綜合上述的極限概念，我們可以嚴格定義函數圖形上的三種漸近線。漸近線是一條直線，當圖形向無限遠處延伸時，會與這條直線無限靠近。以下我們將給出每一種漸近線的嚴格數學定義。
@@ -34,10 +34,10 @@ export default function Asymptotes() {
       <div className="content-block">
         
         {/* =========================================
-            5.1 垂直漸近線 
+            6.1 垂直漸近線 
         ========================================= */}
         <div className="example-box mb-8">
-          <h3 className="example-title text-xl font-bold mb-3 text-blue-800">5.1 垂直漸近線 (Vertical Asymptotes)</h3>
+          <h3 className="example-title text-xl font-bold mb-3 text-blue-800">6.1 垂直漸近線 (Vertical Asymptotes)</h3>
           <p className="mb-4 text-gray-700">
             當 <InlineMath settings={{ strict: false }} math="x" /> 逼近某個有限值 <InlineMath settings={{ strict: false }} math="a" /> 時，如果函數值 <InlineMath settings={{ strict: false }} math="f(x)" /> 無限增大或無限縮小（發散至正負無窮大），這條垂直線 <InlineMath settings={{ strict: false }} math="x = a" /> 就稱為函數的垂直漸近線。
           </p>
@@ -75,10 +75,10 @@ export default function Asymptotes() {
         </div>
 
         {/* =========================================
-            5.2 水平漸近線 
+            6.2 水平漸近線 
         ========================================= */}
         <div className="example-box mb-8">
-          <h3 className="example-title text-xl font-bold mb-3 text-blue-800">5.2 水平漸近線 (Horizontal Asymptotes)</h3>
+          <h3 className="example-title text-xl font-bold mb-3 text-blue-800">6.2 水平漸近線 (Horizontal Asymptotes)</h3>
           <p className="mb-4 text-gray-700">
             描述函數在 <InlineMath settings={{ strict: false }} math="x" /> 趨向正負無限大時的最終穩定狀態。
           </p>
@@ -98,10 +98,10 @@ export default function Asymptotes() {
         </div>
 
         {/* =========================================
-            5.3 斜漸近線 
+            6.3 斜漸近線 
         ========================================= */}
         <div className="example-box">
-          <h3 className="example-title text-xl font-bold mb-3 text-blue-800">5.3 斜直線/斜漸近線 (Slant / Oblique Asymptotes)</h3>
+          <h3 className="example-title text-xl font-bold mb-3 text-blue-800">6.3 斜直線/斜漸近線 (Slant / Oblique Asymptotes)</h3>
           <p className="mb-4 text-gray-700">
             當分式函數中，分子的最高次方剛好比分母大 <InlineMath settings={{ strict: false }} math="1" /> 時會出現。此時圖形在無限遠處會趨近一條斜直線 <InlineMath settings={{ strict: false }} math="y = mx + b" />。
           </p>

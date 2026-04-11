@@ -26,7 +26,7 @@ export default function EpsilonDeltaProof() {
   return (
     <section className="subsection mt-12">
       <h2 className="section-title text-2xl font-bold mb-4 border-b-2 border-emerald-500 pb-2">
-        2. <InlineMath math="\epsilon-\delta" /> 嚴格定義證明範例
+        3. <InlineMath math="\epsilon-\delta" /> 嚴格定義證明範例
       </h2>
       
       <p>
