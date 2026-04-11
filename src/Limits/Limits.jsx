@@ -1,4 +1,3 @@
-// src/Limits/Limits.jsx
 import React from 'react';
 import './Limits.css'; 
 
