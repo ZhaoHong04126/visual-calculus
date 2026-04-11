@@ -47,7 +47,9 @@ export default function HigherOrderDerivatives() {
         </p>
         
         <div className="bg-white p-4 rounded border border-teal-100">
-          <strong className="text-gray-800 block mb-2">範例：求單位圓 $x^2 + y^2 = 1$ 上的切線斜率 $dy/dx$</strong>
+          <strong className="text-gray-800 block mb-2">
+            範例：求單位圓 <InlineMath math="x^2 + y^2 = 1" /> 上的切線斜率 <InlineMath math="\frac{dy}{dx}" />
+          </strong>
           <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700">
             <li>對等式兩邊同時對 <InlineMath math="x" /> 微分：
               <BlockMath math="\frac{d}{dx}(x^2 + y^2) = \frac{d}{dx}(1)" />
