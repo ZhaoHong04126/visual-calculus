@@ -43,20 +43,41 @@ export default function Asymptotes() {
           </p>
           
           <div className="math-box p-6 bg-gray-50 rounded-lg shadow-sm border border-gray-200">
-            <strong className="block mb-2">極限定義：</strong>
-            <p className="mb-4">若函數 <InlineMath settings={{ strict: false }} math="f(x)" /> 滿足下列六種極限情況中的<strong>任何一種</strong>：</p>
+            <strong className="block mb-2 text-gray-800">極限定義：</strong>
+            <p className="mb-4 text-gray-700">若函數 <InlineMath settings={{ strict: false }} math="f(x)" /> 滿足下列六種極限情況中的<strong>任何一種</strong>：</p>
             
-            {/* 使用 CSS Grid 排版 6 種極限情況 */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-              <div className="limit-item text-center p-2 bg-white rounded border"><BlockMath settings={{ strict: false }} math="\lim_{x \to a} f(x) = +\infty" /></div>
-              <div className="limit-item text-center p-2 bg-white rounded border"><BlockMath settings={{ strict: false }} math="\lim_{x \to a^+} f(x) = +\infty" /></div>
-              <div className="limit-item text-center p-2 bg-white rounded border"><BlockMath settings={{ strict: false }} math="\lim_{x \to a^-} f(x) = +\infty" /></div>
-              <div className="limit-item text-center p-2 bg-white rounded border"><BlockMath settings={{ strict: false }} math="\lim_{x \to a} f(x) = -\infty" /></div>
-              <div className="limit-item text-center p-2 bg-white rounded border"><BlockMath settings={{ strict: false }} math="\lim_{x \to a^+} f(x) = -\infty" /></div>
-              <div className="limit-item text-center p-2 bg-white rounded border"><BlockMath settings={{ strict: false }} math="\lim_{x \to a^-} f(x) = -\infty" /></div>
+            {/* 強制 100% 呈現 2x3 矩陣的保證寫法 */}
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(3, 1fr)', 
+              gap: '16px', 
+              marginBottom: '16px',
+              width: '100%'
+            }}>
+              {/* Row 1: +infinity */}
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+                <InlineMath math="\lim_{x \to a} f(x) = +\infty" />
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+                <InlineMath math="\lim_{x \to a^+} f(x) = +\infty" />
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+                <InlineMath math="\lim_{x \to a^-} f(x) = +\infty" />
+              </div>
+              
+              {/* Row 2: -infinity */}
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+                <InlineMath math="\lim_{x \to a} f(x) = -\infty" />
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+                <InlineMath math="\lim_{x \to a^+} f(x) = -\infty" />
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+                <InlineMath math="\lim_{x \to a^-} f(x) = -\infty" />
+              </div>
             </div>
 
-            <p className="mt-4">
+            <p className="mt-4 text-gray-700">
               則直線 <InlineMath settings={{ strict: false }} math="x = a" /> 即為 <InlineMath settings={{ strict: false }} math="f(x)" /> 的 <strong>垂直漸近線 (Vertical Asymptote)</strong>。
             </p>
           </div>
