@@ -33,6 +33,22 @@
   margin-top: 1rem;
 }
 
+.venn-wrapper.small {
+  margin: 0;
+}
+
+.venn-wrapper.small .venn-svg-container {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.venn-wrapper.small svg {
+  width: 100px;
+  height: 60px;
+}
+
 .formula-card {
   background-color: #ffffff;
   padding: 1.5rem;

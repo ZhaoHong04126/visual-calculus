@@ -8,7 +8,8 @@ import Introduction from './Introduction/Introduction';
 import Functions from './Functions/Functions';
 import Limits from './Limits/Limits';
 import Derivatives from './Derivatives/Derivatives';
-// import Integrals from './Integrals/Integrals';
+import Integrals from './Integrals/Integrals';
+import Series from './Series/Series';
 
 export default function App() {
   // 控制側邊欄開關的狀態，預設為開啟 (true)
@@ -50,14 +51,19 @@ export default function App() {
           </li>
            <li>
             <NavLink to="/derivatives" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第二章：微分學
+              第三章：導數與微分
             </NavLink>
           </li>
-          {/* <li>
+          <li>
             <NavLink to="/integrals" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第三章：積分學
+              第四章：積分學
             </NavLink>
-          </li> */}
+          </li>
+          <li>
+            <NavLink to="/series" className={({ isActive }) => isActive ? "active-link" : ""}>
+              第五章：無窮級數
+            </NavLink>
+          </li>
         </ul>
       </nav>
 
@@ -75,7 +81,8 @@ export default function App() {
             <Route path="/functions" element={<Functions />} />
             <Route path="/limits" element={<Limits />} />
             <Route path="/derivatives" element={<Derivatives />} />
-            {/* <Route path="/integrals" element={<Integrals />} /> */}
+            <Route path="/integrals" element={<Integrals />} />
+            <Route path="/series" element={<Series />} />
           </Routes>
         </div>
       </main>

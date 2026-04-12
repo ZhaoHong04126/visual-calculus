@@ -3,6 +3,7 @@ import React from 'react';
 import './Review.css';
 import { InlineMath, BlockMath } from '../components/Math';
 import TrigHexagon from './TrigHexagon';
+import VennDiagram from './VennDiagram';
 
 export default function Review() {
   return (
@@ -13,7 +14,87 @@ export default function Review() {
       </header>
 
       <section className="review-section">
-        <h2 className="review-section-title">1. 代數基礎</h2>
+        <h2 className="review-section-title">1. 集合論基礎</h2>
+        <div className="formula-grid">
+          <div className="formula-card">
+            <h3>基本定義與符號</h3>
+            <ul className="formula-list">
+              <li>元素與集合：<InlineMath math="a \in A, b \notin A" /></li>
+              <li>子集：<InlineMath math="A \subseteq B" /> (A 的元素皆在 B 中)</li>
+              <li>空集：<InlineMath math="\emptyset" /> 或 <InlineMath math="\{ \}" /></li>
+              <li>宇集 (Universal Set)：<InlineMath math="U" /></li>
+            </ul>
+            <details className="derivation-box">
+              <summary>觀念解析：集合的表示法</summary>
+              <div className="derivation-steps">
+                <div className="step-item">
+                  <div className="step-desc">列舉法：</div>
+                  <p><InlineMath math="A = \{1, 2, 3, 4\}" /></p>
+                </div>
+                <div className="step-item">
+                  <div className="step-desc">描述法：</div>
+                  <p><InlineMath math="A = \{x \mid x \text{ 是小於 5 的正整數}\}" /></p>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div className="formula-card">
+            <h3>集合運算</h3>
+            <ul className="formula-list">
+              <li style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
+                <div><InlineMath math="A \cup B = \{x \mid x \in A \text{ 或 } x \in B\}" /> (聯集)</div>
+                <VennDiagram type="union" size="small" />
+              </li>
+              <li style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
+                <div><InlineMath math="A \cap B = \{x \mid x \in A \text{ 且 } x \in B\}" /> (交集)</div>
+                <VennDiagram type="intersection" size="small" />
+              </li>
+              <li style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
+                <div><InlineMath math="A \setminus B = \{x \mid x \in A \text{ 且 } x \notin B\}" /> (差集)</div>
+                <VennDiagram type="difference" size="small" />
+              </li>
+              <li style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
+                <div><InlineMath math="A^c = \{x \mid x \in U \text{ 且 } x \notin A\}" /> (補集)</div>
+                <VennDiagram type="complement" size="small" />
+              </li>
+            </ul>
+            <details className="derivation-box">
+              <summary>過程推導：狄摩根定律 (De Morgan's Laws)</summary>
+              <div className="derivation-steps">
+                <div className="step-item">
+                  <div className="step-desc">定律內容：</div>
+                  <BlockMath math="(A \cup B)^c = A^c \cap B^c" />
+                  <BlockMath math="(A \cap B)^c = A^c \cup B^c" />
+                </div>
+                <div className="step-item">
+                  <div className="step-desc">視覺化理解：以 (A ∪ B)^c 為例</div>
+                  <VennDiagram type="complementUnion" size="small" />
+                  <p>利用文氏圖可以直觀地觀察到「聯集的補集」區域與「補集的交集」區域完全一致。</p>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div className="formula-card">
+            <h3>排容原理 (Inclusion-Exclusion)</h3>
+            <p>對於有限集合 A 與 B：</p>
+            <BlockMath math="n(A \cup B) = n(A) + n(B) - n(A \cap B)" />
+            <p>對於三個集合 A, B, C：</p>
+            <BlockMath math="n(A \cup B \cup C) = n(A) + n(B) + n(C) - n(A \cap B) - n(B \cap C) - n(C \cap A) + n(A \cap B \cap C)" />
+            <details className="derivation-box">
+              <summary>過程推導：計數邏輯</summary>
+              <div className="derivation-steps">
+                <div className="step-item">
+                  <div className="step-desc">為何要減去交集？</div>
+                  <p>當我們計算 <InlineMath math="n(A) + n(B)" /> 時，重疊的部分 <InlineMath math="n(A \cap B)" /> 被算了兩次，因此必須減掉一次以獲得正確的總數。</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section className="review-section">
+        <h2 className="review-section-title">2. 代數基礎</h2>
         <div className="formula-grid">
           <div className="formula-card">
             <h3>乘法公式與因式分解</h3>
@@ -66,7 +147,7 @@ export default function Review() {
       </section>
 
       <section className="review-section">
-        <h2 className="review-section-title">2. 指數與對數</h2>
+        <h2 className="review-section-title">3. 指數與對數</h2>
         <div className="formula-grid">
           <div className="formula-card">
             <h3>指數性質</h3>
@@ -117,7 +198,7 @@ export default function Review() {
       </section>
 
       <section className="review-section">
-        <h2 className="review-section-title">3. 三角函數</h2>
+        <h2 className="review-section-title">4. 三角函數</h2>
         <div className="formula-grid">
           <div className="formula-card">
             <h3>基本恆等式</h3>
@@ -167,7 +248,7 @@ export default function Review() {
       </section>
 
       <section className="review-section">
-        <h2 className="review-section-title">4. 幾何公式</h2>
+        <h2 className="review-section-title">5. 幾何公式</h2>
         <div className="formula-grid">
           <div className="formula-card">
             <h3>平面幾何</h3>
