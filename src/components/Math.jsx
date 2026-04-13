@@ -28,5 +28,11 @@ export const BlockMath = ({ math, children, errorColor, renderError }) => {
   }, [formula, errorColor, renderError]);
 
   if (error) return renderError ? renderError(error) : <div dangerouslySetInnerHTML={{ __html: error.message }} />;
-  return <div data-testid="react-katex" dangerouslySetInnerHTML={{ __html: html }} />;
+  return (
+    <div
+      data-testid="react-katex"
+      style={{ overflowX: 'auto', maxWidth: '100%' }}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  );
 };
