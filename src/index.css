@@ -3,13 +3,19 @@
    將常用顏色與字體寫成變數，未來想換主題色只要改這裡
 ========================================= */
 :root {
-  --primary-color: #3b82f6;      /* 主題藍色 */
-  --primary-hover: #2563eb;      /* 滑鼠懸停的深藍色 */
-  --bg-color: #f8fafc;           /* 網站基礎背景色 (極淺灰) */
-  --text-main: #1e293b;          /* 主要文字顏色 (深灰，比純黑閱讀起來舒服) */
-  --text-muted: #64748b;         /* 次要/輔助文字顏色 */
-  --border-color: #e2e8f0;       /* 邊框顏色 */
-  
+  --primary-color: #3b82f6;
+  /* 主題藍色 */
+  --primary-hover: #2563eb;
+  /* 滑鼠懸停的深藍色 */
+  --bg-color: #f8fafc;
+  /* 網站基礎背景色 (極淺灰) */
+  --text-main: #1e293b;
+  /* 主要文字顏色 (深灰，比純黑閱讀起來舒服) */
+  --text-muted: #64748b;
+  /* 次要/輔助文字顏色 */
+  --border-color: #e2e8f0;
+  /* 邊框顏色 */
+
   /* 設定適合閱讀的中英文字體 */
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif;
 }
@@ -18,7 +24,9 @@
    2. 基礎重置 (CSS Reset)
    清除所有瀏覽器預設的 margin 和 padding，確保各平台顯示一致
 ========================================= */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -27,13 +35,15 @@
 /* =========================================
    3. 全域標籤設定 (Global HTML Elements)
 ========================================= */
-html, body {
+html,
+body {
   font-family: var(--font-sans);
   color: var(--text-main);
   background-color: var(--bg-color);
-  line-height: 1.6;          /* 增加行高，讓數學定理和長文更好閱讀 */
+  line-height: 1.6;
+  /* 增加行高，讓數學定理和長文更好閱讀 */
   font-size: 16px;
-  
+
   /* 讓文字在螢幕上渲染得更平滑銳利 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -47,7 +57,12 @@ html, body {
 }
 
 /* 全域標題基礎設定 */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.3;
   font-weight: 600;
   color: #0f172a;

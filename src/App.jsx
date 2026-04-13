@@ -23,6 +23,12 @@ export default function App() {
   return (
     <div className="app-container">
       
+
+      {/* 手機版遮罩：點擊可關閉側邊欄 */}
+      {isSidebarOpen && (
+        <div className="sidebar-overlay" onClick={toggleSidebar} aria-hidden="true" />
+      )}
+
       {/* 左側導覽列：透過動態 class 控制展開或隱藏 */}
       <nav className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
