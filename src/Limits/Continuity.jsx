@@ -77,15 +77,22 @@ export default function Continuity() {
           </div>
         </div>
         
-        {/* ✨ 改用乾淨的 CSS Class 渲染互動區塊外框 */}
-        <div className="interactive-box">
-          <div className="interactive-box-header">
-            <span style={{ marginRight: '8px', fontSize: '18px' }}>🖱️</span> 互動探索：不連續的種類
+        {/* ✨ 可伸縮的互動探索區塊，樣式同 ProofBox */}
+        <details className="proof-box" open>
+          <summary>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <span style={{ marginRight: '8px', fontSize: '18px' }}>🖱️</span>
+              互動探索：不連續的種類
+            </div>
+            <div>
+              <span className="proof-toggle-btn expand-text">展開互動 ▼</span>
+              <span className="proof-toggle-btn collapse-text">收起互動 ▲</span>
+            </div>
+          </summary>
+          <div className="proof-content">
+            <DiscontinuityVisualizer />
           </div>
-          <div className="interactive-box-content">
-             <DiscontinuityVisualizer />
-          </div>
-        </div>
+        </details>
       </div>
 
       {/* 7.3 中間值定理 */}

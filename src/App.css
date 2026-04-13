@@ -103,6 +103,8 @@
   background-color: #ffffff;
   transition: all 0.3s ease-in-out;
   overflow: hidden; /* 讓 content-wrapper 自己捲動 */
+  overflow-x: hidden; /* 禁止水平水平溢出 */
+  max-width: 100%;
 }
 
 /* ================== 側邊欄內關閉按鈕（ChatGPT 風格） ================== */
@@ -135,6 +137,7 @@
 .content-wrapper {
   padding: clamp(3.5rem, 5vw, 4.5rem) clamp(1.5rem, 4vw, 4rem) clamp(2rem, 3vw, 3rem) clamp(2rem, 5vw, 5rem);
   overflow-y: auto;
+  overflow-x: hidden; /* 禁止水平滾動 */
   flex: 1;
   /* 大螢幕限制最大寬度，讓閱讀舒適 */
   max-width: 1200px;

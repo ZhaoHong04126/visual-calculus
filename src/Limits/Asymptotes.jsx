@@ -46,33 +46,33 @@ export default function Asymptotes() {
             <strong className="block mb-2 text-gray-800">極限定義：</strong>
             <p className="mb-4 text-gray-700">若函數 <InlineMath settings={{ strict: false }} math="f(x)" /> 滿足下列六種極限情況中的<strong>任何一種</strong>：</p>
             
-            {/* 強制 100% 呈現 2x3 矩陣的保證寫法 */}
+            {/* 強制響應式呈現 2x3 矩陣，小螢幕自動縮列 */}
             <div style={{ 
               display: 'grid', 
-              gridTemplateColumns: 'repeat(3, 1fr)', 
-              gap: '16px', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(180px, 100%), 1fr))', 
+              gap: '12px', 
               marginBottom: '16px',
               width: '100%'
             }}>
               {/* Row 1: +infinity */}
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
                 <InlineMath math="\lim_{x \to a} f(x) = +\infty" />
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
                 <InlineMath math="\lim_{x \to a^+} f(x) = +\infty" />
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
                 <InlineMath math="\lim_{x \to a^-} f(x) = +\infty" />
               </div>
               
               {/* Row 2: -infinity */}
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
                 <InlineMath math="\lim_{x \to a} f(x) = -\infty" />
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
                 <InlineMath math="\lim_{x \to a^+} f(x) = -\infty" />
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '16px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
                 <InlineMath math="\lim_{x \to a^-} f(x) = -\infty" />
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function Asymptotes() {
             </p>
           </div>
           
-          <ProofBox title={<><InlineMath math="\epsilon-M" /> 嚴格定義證明</>}>
+          <ProofBox title="ε-M 嚴格定義證明">
             <p>
               以「右極限趨近正無窮大」 (<InlineMath settings={{ strict: false }} math="\lim_{x \to a^+} f(x) = +\infty" />) 為例：
             </p>
@@ -105,10 +105,15 @@ export default function Asymptotes() {
           </p>
           <div className="math-box p-6 bg-gray-50 rounded-lg shadow-sm border border-gray-200">
             <p className="mb-2"><strong>極限表示法：</strong>若極限存在且為有限值 <InlineMath settings={{ strict: false }} math="L" />，則直線 <InlineMath settings={{ strict: false }} math="y = L" /> 為水平漸近線：</p>
-            <BlockMath settings={{ strict: false }} math="\lim_{x \to \infty} f(x) = L \quad \text{或} \quad \lim_{x \to -\infty} f(x) = L" />
+            {/* 垂直排列：公式一 → 或（置中）→ 公式二 */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <BlockMath settings={{ strict: false }} math="\lim_{x \to \infty} f(x) = L" />
+              <div style={{ fontWeight: 'bold', color: '#475569', margin: '-0.25rem 0', fontSize: '1rem' }}>或</div>
+              <BlockMath settings={{ strict: false }} math="\lim_{x \to -\infty} f(x) = L" />
+            </div>
           </div>
 
-          <ProofBox title={<>嚴格定義 (以 <InlineMath math="x \to \infty" /> 為例)</>}>
+          <ProofBox title="嚴格定義 (以 x → ∞ 為例)">
             <p>
               稱直線 <InlineMath settings={{ strict: false }} math="y = L" /> 為函數 <InlineMath settings={{ strict: false }} math="f(x)" /> 的水平漸近線，若對於任意給定的誤差容忍值 <InlineMath settings={{ strict: false }} math="\epsilon > 0" />，都存在一個正實數 <InlineMath settings={{ strict: false }} math="M > 0" />，使得當自變數：
             </p>
@@ -132,7 +137,7 @@ export default function Asymptotes() {
             <p className="mt-2">則直線 <InlineMath settings={{ strict: false }} math="y = mx + b" /> 為函數的斜漸近線。</p>
           </div>
 
-          <ProofBox title={<>嚴格定義 (以 <InlineMath math="x \to \infty" /> 為例)</>}>
+          <ProofBox title="嚴格定義 (以 x → ∞ 為例)">
             <p>
               稱直線 <InlineMath settings={{ strict: false }} math="y = mx + b" /> 為函數 <InlineMath settings={{ strict: false }} math="f(x)" /> 的斜漸近線，若對於任意給定的 <InlineMath settings={{ strict: false }} math="\epsilon > 0" />，都存在一個正實數 <InlineMath settings={{ strict: false }} math="M > 0" />，使得當：
             </p>

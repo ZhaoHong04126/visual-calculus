@@ -47,6 +47,10 @@ body {
   /* 讓文字在螢幕上渲染得更平滑銳利 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* 禁止左右滑動（水平溢出） */
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* 確保 React 的根節點能撐滿整個視窗高度 */
@@ -54,6 +58,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden; /* 禁止根節點水平溢出 */
+  max-width: 100vw;
 }
 
 /* 全域標題基礎設定 */
