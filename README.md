@@ -56,21 +56,27 @@ visual-calculus/
 ├── public/                 # 靜態資源
 ├── src/
 │   ├── assets/             # 圖片或其他共用資源
-│   ├── components/         # 共用元件 (如修正警告的 Math.jsx)
+│   │   ├── hero.png
+│   │   ├── react.svg
+│   │   └── vite.svg
+│   │
+│   ├── components/         # 共用元件
+│   │   ├── ComingSoon.css           # 「即將推出」頁面樣式
+│   │   ├── ComingSoon.jsx           # 「即將推出」佔位元件
+│   │   └── Math.jsx                 # 自訂 KaTeX 封裝（無警告）
+│   │
 │   ├── App.jsx             # 網站主入口：側邊欄導覽列與路由設定 (Routes)
-│   ├── App.css             # 全域樣式：雙欄獨立捲動、懸浮按鈕 (FAB) 等設定
+│   ├── App.css             # 全域樣式：雙欄獨立捲動、響應式側邊欄等設定
+│   ├── index.css           # 全域基礎重置樣式
 │   ├── main.jsx            # React 掛載點
 │   │
-│   ├── Derivatives/        # (準備中) 第三章：導數與微分
-│   │
-│   ├── Functions/          # 第一章：微積分預備知識 (函數)
-│   │   ├── ExpLogFunctions.jsx      # 指數函數、尤拉數 e 與自然對數
-│   │   ├── Functions.css            # 章節專屬樣式
-│   │   ├── Functions.jsx            # 章節主檔
-│   │   ├── InverseFunctions.jsx     # 反函數與 1-1 測試
-│   │   └── InverseTrigFunctions.jsx # 反三角函數與幾何法
-│   │
-│   ├── Integrals/          # (準備中) 第四章：積分
+│   ├── Review/             # 複習：國高中數學
+│   │   ├── Review.css               # 章節專屬樣式
+│   │   ├── Review.jsx               # 章節主檔
+│   │   ├── TrigHexagon.css          # 三角函數六邊形視覺化樣式
+│   │   ├── TrigHexagon.jsx          # 三角函數六邊形互動元件
+│   │   ├── VennDiagram.css          # 文氏圖樣式
+│   │   └── VennDiagram.jsx          # 文氏圖元件
 │   │
 │   ├── Introduction/       # 第零章：微積分簡介
 │   │   ├── CalculusMap.jsx          # 學習地圖
@@ -78,15 +84,38 @@ visual-calculus/
 │   │   ├── Introduction.jsx         # 章節主檔
 │   │   └── WhatIsCalculus.jsx       # 何謂微積分 (微分 vs 積分)
 │   │
-│   └── Limits/             # 第二章：極限與連續
-│       ├── Asymptotes.jsx           # 垂直、水平與斜漸近線
-│       ├── EpsilonDeltaProof.jsx    # 嚴格 ε-δ 證明
-│       ├── LimitDefinition.jsx      # 極限直觀定義與記號
-│       ├── LimitLaws.jsx            # 運算法則與夾擠定理
-│       ├── Limits.css               # 章節專屬樣式
-│       ├── Limits.jsx               # 章節主檔
-│       ├── LimitsAtInfinity.jsx     # 無窮遠處的極限
-│       └── LimitTypes.jsx           # 單側極限與無窮極限
+│   ├── Functions/          # 第一章：微積分預備知識 (函數)
+│   │   ├── ExpLogFunctions.jsx      # 指數函數、尤拉數 e 與自然對數
+│   │   ├── Functions.css            # 章節專屬樣式
+│   │   ├── Functions.jsx            # 章節主檔
+│   │   ├── InverseFunctions.jsx     # 反函數與一對一測試
+│   │   └── InverseTrigFunctions.jsx # 反三角函數與幾何法
+│   │
+│   ├── Limits/             # 第二章：極限與連續
+│   │   ├── Asymptotes.jsx           # 垂直、水平與斜漸近線
+│   │   ├── Continuity.jsx           # 連續性定義與判斷
+│   │   ├── DiscontinuityVisualizer.jsx # 不連續點視覺化
+│   │   ├── EpsilonDeltaProof.jsx    # 嚴格 ε-δ 證明
+│   │   ├── LimitDefinition.jsx      # 極限直觀定義與記號
+│   │   ├── LimitLaws.jsx            # 運算法則與夾擠定理
+│   │   ├── Limits.css               # 章節專屬樣式
+│   │   ├── Limits.jsx               # 章節主檔
+│   │   ├── LimitsAtInfinity.jsx     # 無窮遠處的極限
+│   │   └── LimitTypes.jsx           # 單側極限與無窮極限
+│   │
+│   ├── Derivatives/        # 第三章：導數與微分
+│   │   ├── ChainRule.jsx            # 鏈鎖律
+│   │   ├── DerivativeDefinition.jsx # 導數定義與極限表示
+│   │   ├── Derivatives.jsx          # 章節主檔
+│   │   ├── DifferentiationRules.jsx # 微分公式整理
+│   │   ├── HigherOrderDerivatives.jsx # 高階導數
+│   │   └── ProofBox.css             # 證明框樣式
+│   │
+│   ├── Integrals/          # 第四章：積分學
+│   │   └── Integrals.jsx            # 章節主檔（開發中）
+│   │
+│   └── Series/             # 第五章：無窮級數
+│       └── Series.jsx               # 章節主檔（開發中）
 │
 ├── .gitignore              # Git 版本控制忽略清單
 ├── eslint.config.js        # ESLint 程式碼品質檢查設定檔
