@@ -11,6 +11,16 @@ import Derivatives from './Derivatives/Derivatives';
 import Integrals from './Integrals/Integrals';
 import Series from './Series/Series';
 
+// ChatGPT 風格側邊欄圖示（兩欄面板）
+function SidebarIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <line x1="9" y1="3" x2="9" y2="21" />
+    </svg>
+  );
+}
+
 export default function App() {
   // 控制側邊欄開關的狀態，預設為開啟 (true)
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -29,10 +39,24 @@ export default function App() {
         <div className="sidebar-overlay" onClick={toggleSidebar} aria-hidden="true" />
       )}
 
+      {/* 手機版浮動開啟按鈕（側邊欄關閉時顯示） */}
+      <button
+        className={`mobile-open-btn${isSidebarOpen ? ' hidden' : ''}`}
+        onClick={toggleSidebar}
+        title="展開選單"
+        aria-label="展開選單"
+      >
+        <SidebarIcon />
+      </button>
+
       {/* 左側導覽列：透過動態 class 控制展開或隱藏 */}
       <nav className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
           <h2 className="sidebar-title">微積分參考手冊</h2>
+          {/* 手機版關閉按鈕 - 側邊欄右上角 */}
+          <button className="sidebar-toggle-btn" onClick={toggleSidebar} title="隱藏選單" aria-label="隱藏選單">
+            <SidebarIcon />
+          </button>
         </div>
         <ul className="nav-links">
           <li>
@@ -75,11 +99,6 @@ export default function App() {
 
       {/* 右側主要內容區 */}
       <main className="main-content">
-        {/* 懸浮的選單切換按鈕 */}
-        <button className={`toggle-btn ${isSidebarOpen ? 'shifted' : ''}`} onClick={toggleSidebar} title={isSidebarOpen ? '隱藏選單' : '展開選單'}>
-          {isSidebarOpen ? '❯' : '☰'} 
-        </button>
-
         <div className="content-wrapper">
           <Routes>
             <Route path="/review" element={<Review />} />

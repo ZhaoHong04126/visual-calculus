@@ -34,7 +34,11 @@
 }
 
 .sidebar-header {
-  padding: 2rem 1.5rem 1rem 1.5rem;
+  padding: 1.25rem 0.75rem 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .sidebar-title {
@@ -101,34 +105,30 @@
   overflow: hidden; /* 讓 content-wrapper 自己捲動 */
 }
 
-.toggle-btn {
-  position: fixed;
-  top: 1.5rem;
-  left: 1.5px;
-  width: 42px;
-  height: 42px;
-  display: none; /* 桌面版預設隱藏，手機版才顯示 */
-  justify-content: center;
+/* ================== 側邊欄內關閉按鈕（ChatGPT 風格） ================== */
+.sidebar-toggle-btn {
+  display: none; /* 桌面版隱藏，手機版才顯示 */
+  width: 36px;
+  height: 36px;
   align-items: center;
-  background-color: var(--primary-color, #3b82f6);
-  color: #ffffff;
+  justify-content: center;
+  background: transparent;
   border: none;
-  border-radius: 50%;
+  border-radius: 8px;
+  color: #64748b;
   cursor: pointer;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -1px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease-in-out;
-  z-index: 300; /* 高於 overlay */
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.toggle-btn:hover {
-  background-color: var(--primary-hover, #2563eb);
-  transform: scale(1.08);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.06);
+.sidebar-toggle-btn:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
 }
 
-.toggle-btn.shifted {
-  left: calc(260px + 1rem);
+/* ================== 手機版浮動開啟按鈕 ================== */
+.mobile-open-btn {
+  display: none; /* 桌面版隱藏 */
 }
 
 /* ================== 內容區包裝 ================== */
@@ -196,15 +196,37 @@
     max-width: 100%;
   }
 
-  /* 手機版按鈕不隨側邊欄移動（overlay 模式下不需要） */
-  .toggle-btn.shifted {
-    left: 1rem;
+  /* 手機版側邊欄內關閉按鈕 */
+  .sidebar-toggle-btn {
+    display: flex;
   }
-  .toggle-btn {
-    display: flex; /* 手機版才顯示 */
-    left: 1rem;
+
+  /* 手機版浮動開啟按鈕（側邊欄關閉時顯示） */
+  .mobile-open-btn {
+    display: flex;
+    position: fixed;
     top: 1rem;
+    left: 1rem;
     width: 40px;
     height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #475569;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .mobile-open-btn:hover {
+    background-color: #f8fafc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .mobile-open-btn.hidden {
+    display: none;
   }
 }
