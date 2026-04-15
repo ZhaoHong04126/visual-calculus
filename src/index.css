@@ -76,7 +76,8 @@ h6 {
 
 /* 全域捲軸美化 (讓閱讀區域的捲軸看起來更現代) */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  height: 6px; /* 控制水平捲軸的高度 */
 }
 
 ::-webkit-scrollbar-track {

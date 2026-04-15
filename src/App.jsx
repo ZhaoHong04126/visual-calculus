@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route, NavLink } from 'react-router-dom';
-import './App.css'; 
+import './App.css';
 
 // 引入各個主題的進入點元件
 import Review from './Review/Review';
@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <div className="app-container">
-      
+
 
       {/* 手機版遮罩：點擊可關閉側邊欄 */}
       {isSidebarOpen && (
@@ -71,7 +71,7 @@ export default function App() {
           </li>
           <li>
             <NavLink to="/functions" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第一章：微積分預備知識
+              第一章：函數介紹
             </NavLink>
           </li>
           <li>
@@ -79,7 +79,7 @@ export default function App() {
               第二章：極限與連續
             </NavLink>
           </li>
-           <li>
+          <li>
             <NavLink to="/derivatives" className={({ isActive }) => isActive ? "active-link" : ""}>
               第三章：導數與微分
             </NavLink>
