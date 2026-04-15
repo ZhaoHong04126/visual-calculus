@@ -4,6 +4,7 @@ import DerivativeDefinition from './DerivativeDefinition';
 import DifferentiationRules from './DifferentiationRules';
 import ChainRule from './ChainRule';
 import HigherOrderDerivatives from './HigherOrderDerivatives';
+import InverseDerivatives from './InverseDerivatives';
 import '../Limits/Limits.css'; 
 
 export default function Derivatives() {
@@ -20,6 +21,7 @@ export default function Derivatives() {
       <DifferentiationRules />
       <ChainRule />
       <HigherOrderDerivatives />
+      <InverseDerivatives />
       
     </div>
   );

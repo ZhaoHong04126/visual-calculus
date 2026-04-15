@@ -47,6 +47,38 @@ export default function DerivativeDefinition() {
           </p>
         </div>
       </div>
+
+      {/* 1.3 導數的寫法 */}
+      <div className="math-box mb-6 p-6 bg-purple-50 rounded-lg shadow-sm border border-purple-100 mt-8">
+        <h3 className="text-xl font-bold mb-3 text-purple-800">1.3 導數的寫法 (Notation of Derivatives)</h3>
+        <p className="mb-4 text-gray-700">
+          在微積分中，導數有多種常見的表示方式。它們由不同的數學家提出，適用於不同的情境：
+        </p>
+        <ul className="list-none space-y-4 text-gray-700">
+          <li className="bg-white p-4 rounded border border-purple-200">
+            <strong>拉格朗日符號 (Lagrange's notation)：</strong> 
+            <p className="text-sm text-gray-600 my-1">最常見且簡潔的寫法，使用撇號。</p>
+            <div className="mt-2 text-center text-lg"><InlineMath math="f'(x), \quad y'" /></div>
+          </li>
+          <li className="bg-white p-4 rounded border border-purple-200">
+            <strong>萊布尼茲符號 (Leibniz's notation)：</strong> 
+            <p className="text-sm text-gray-600 my-1">強調微小的變化量比例（<InlineMath math="dy" /> 與 <InlineMath math="dx" />），在連鎖律和積分計算中非常直觀。</p>
+            {/* 這裡把 \frac 改成了 \dfrac，並加上 text-lg 讓字體再放大一點 */}
+            <div className="mt-3 text-center text-lg"><InlineMath math="\dfrac{dy}{dx}, \quad \dfrac{d}{dx}f(x)" /></div>
+          </li>
+          <li className="bg-white p-4 rounded border border-purple-200">
+            <strong>牛頓符號 (Newton's notation)：</strong> 
+            <p className="text-sm text-gray-600 my-1">在變數上方加點，通常專門用於物理學中表示對「時間」的微分。</p>
+            <div className="mt-2 text-center text-lg"><InlineMath math="\dot{y}, \quad \ddot{y}" /></div>
+          </li>
+          <li className="bg-white p-4 rounded border border-purple-200">
+            <strong>尤拉符號 (Euler's notation)：</strong> 
+            <p className="text-sm text-gray-600 my-1">將微分視為一個算子 (Operator) 作用在函數上。</p>
+            <div className="mt-2 text-center text-lg"><InlineMath math="D_x y, \quad Df(x)" /></div>
+          </li>
+        </ul>
+      </div>
+
     </section>
   );
 }
