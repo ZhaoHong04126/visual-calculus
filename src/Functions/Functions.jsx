@@ -5,7 +5,9 @@ import './Functions.css';
 import TrigFunctions from './TrigFunctions';
 import InverseFunctions from './InverseFunctions';
 import ExpLogFunctions from './ExpLogFunctions';
-import InverseTrigFunctions from './InverseTrigFunctions'; // 引入新元件
+import InverseTrigFunctions from './InverseTrigFunctions';
+import HyperbolicFunctions from './HyperbolicFunctions';
+import InverseHyperbolicFunctions from './InverseHyperbolicFunctions';
 
 export default function Functions() {
   return (
@@ -20,6 +22,8 @@ export default function Functions() {
       <ExpLogFunctions />
       <InverseFunctions />
       <InverseTrigFunctions />
+      <HyperbolicFunctions />
+      <InverseHyperbolicFunctions />
 
     </div>
   );
