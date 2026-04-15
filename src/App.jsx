@@ -3,7 +3,6 @@ import { Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
 
 // 引入各個主題的進入點元件
-import Review from './Review/Review';
 import Introduction from './Introduction/Introduction';
 import Functions from './Functions/Functions';
 import Limits from './Limits/Limits';
@@ -60,11 +59,6 @@ export default function App() {
         </div>
         <ul className="nav-links">
           <li>
-            <NavLink to="/review" className={({ isActive }) => isActive ? "active-link" : ""}>
-              複習：國高中數學
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""} end>
               第零章：微積分簡介
             </NavLink>
@@ -101,7 +95,6 @@ export default function App() {
       <main className="main-content">
         <div className="content-wrapper">
           <Routes>
-            <Route path="/review" element={<Review />} />
             <Route path="/" element={<Introduction />} />
             <Route path="/functions" element={<Functions />} />
             <Route path="/limits" element={<Limits />} />
