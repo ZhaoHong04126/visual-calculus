@@ -240,6 +240,47 @@ export default function DifferentiationRules() {
 
         </div>
       </div>
+
+      {/* 2.4 一般指對數函數 */}
+      <div className="math-box mb-6 p-6 bg-pink-50 rounded-lg shadow-sm border border-pink-200">
+        <h3 className="text-xl font-bold mb-3 text-pink-800">2.4 一般指數與對數函數的微分</h3>
+        <p className="mb-4 text-gray-700">
+          有了自然指數 <InlineMath math="e^x" /> 與自然對數 <InlineMath math="\ln x" /> 的基礎，只要利用指數的性質或換底公式，配合連鎖律，就可以輕易推導出底數為任意正實數 <InlineMath math="a" /> （<InlineMath math="a > 0, a \neq 1" />）的微分公式。
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-base">
+          {/* 一般指數 */}
+          <div className="p-4 bg-white rounded border border-pink-200">
+            <strong>2.4.1 一般指數函數：</strong>
+            <BlockMath math="\dfrac{d}{dx}[a^x] = a^x \ln a" />
+            <ProofBox title="查看證明 (利用自然指數換底)">
+              <p className="mb-2">根據對數的性質，我們可以將 <InlineMath math="a^x" /> 改寫為以自然常數 <InlineMath math="e" /> 為底的指數函數：</p>
+              <BlockMath math="a^x = e^{\ln(a^x)} = e^{x \ln a}" />
+              <p className="my-2">其中 <InlineMath math="\ln a" /> 是一個<strong>常數</strong>。接著對兩邊微分，由於會涉及到內函數 <InlineMath math="x \ln a" />，我們需要套用<strong>連鎖律 (Chain Rule)</strong>：</p>
+              <BlockMath math="\dfrac{d}{dx}[a^x] = \dfrac{d}{dx}[e^{(\ln a) x}]" />
+              <BlockMath math="= e^{(\ln a) x} \cdot \dfrac{d}{dx}[(\ln a) x]" />
+              <p className="my-2">內部的常數係數微分：</p>
+              <BlockMath math="= e^{x \ln a} \cdot \ln a = a^x \ln a" />
+            </ProofBox>
+          </div>
+
+          {/* 一般對數 */}
+          <div className="p-4 bg-white rounded border border-pink-200">
+            <strong>2.4.2 一般對數函數：</strong>
+            <BlockMath math="\dfrac{d}{dx}[\log_a x] = \dfrac{1}{x \ln a}" />
+            <ProofBox title="查看證明 (利用換底公式)">
+              <p className="mb-2">根據對數換底公式，將原本底為 <InlineMath math="a" /> 的對數轉換為以 <InlineMath math="e" /> 為底的自然對數：</p>
+              <BlockMath math="\log_a x = \dfrac{\ln x}{\ln a} = \dfrac{1}{\ln a} \cdot \ln x" />
+              <p className="my-2">由於 <InlineMath math="\dfrac{1}{\ln a}" /> 是一個常數倍數，根據微分的常數倍數法則，可以直接將其提出來再微分：</p>
+              <BlockMath math="\dfrac{d}{dx}[\log_a x] = \dfrac{d}{dx}\left[ \dfrac{1}{\ln a} \ln x \right]" />
+              <BlockMath math="= \dfrac{1}{\ln a} \cdot \dfrac{d}{dx}[\ln x]" />
+              <p className="my-2">代入原本學過的 <InlineMath math="\ln x" /> 的微分公式 <InlineMath math="\dfrac{1}{x}" />：</p>
+              <BlockMath math="= \dfrac{1}{\ln a} \cdot \dfrac{1}{x} = \dfrac{1}{x \ln a}" />
+            </ProofBox>
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 }

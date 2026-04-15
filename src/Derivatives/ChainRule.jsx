@@ -1,6 +1,27 @@
 // src/Derivatives/ChainRule.jsx
 import React from 'react';
 import { InlineMath, BlockMath } from '../components/Math';
+import './ProofBox.css';
+
+const ProofBox = ({ title = "查看證明", children }) => {
+  return (
+    <details className="proof-box">
+      <summary>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <span style={{ marginRight: '8px', fontSize: '18px' }}>📝</span>
+          {title}
+        </div>
+        <div>
+          <span className="proof-toggle-btn expand-text">展開證明 ▼</span>
+          <span className="proof-toggle-btn collapse-text">收起證明 ▲</span>
+        </div>
+      </summary>
+      <div className="proof-content">
+        {children}
+      </div>
+    </details>
+  );
+};
 
 export default function ChainRule() {
   return (
@@ -43,6 +64,54 @@ export default function ChainRule() {
           </li>
         </ol>
       </div>
+      <div className="math-box mt-6 p-6 bg-yellow-50 rounded-lg shadow-sm border border-yellow-200">
+        <h3 className="text-xl font-bold mb-3 text-yellow-800">3.2 補充：一般指數與指對數型函數微分</h3>
+        <p className="mb-4 text-gray-700">
+          結合前面學過的一般指數函數，或是利用對數微分法與連鎖律，我們可以推導出以下兩個實用的延伸公式：
+        </p>
+
+        <div className="space-y-4">
+          <div className="bg-white p-4 rounded border border-yellow-100">
+            <strong className="text-gray-800 block mb-2">1. 底數為常數、指數為函數：</strong>
+            <BlockMath math="\frac{d}{dx}\left[a^{g(x)}\right] = a^{g(x)}(\ln a)g'(x)" />
+            <ProofBox title="查看推導過程 (使用連鎖律與自然指數)">
+              <p className="mb-2">將 <InlineMath math="a^{g(x)}" /> 寫為以 <InlineMath math="e" /> 為底數的指數函數：</p>
+              <BlockMath math="a^{g(x)} = e^{\ln(a^{g(x)})} = e^{g(x) \ln a}" />
+              <p className="my-2">由於 <InlineMath math="\ln a" /> 是一個常數，我們對其微分並套用連鎖律：</p>
+              <BlockMath math="\frac{d}{dx}\left[e^{g(x)\ln a}\right] = e^{g(x)\ln a} \cdot \frac{d}{dx}[g(x)\ln a]" />
+              <p className="my-2">將 <InlineMath math="e^{g(x)\ln a}" /> 換回 <InlineMath math="a^{g(x)}" />，並提出常數 <InlineMath math="\ln a" />：</p>
+              <BlockMath math="= a^{g(x)} \cdot (\ln a) \cdot g'(x)" />
+            </ProofBox>
+          </div>
+
+          <div className="bg-white p-4 rounded border border-yellow-100">
+            <strong className="text-gray-800 block mb-2">2. 底數與指數皆為變數函數：</strong>
+            <BlockMath math="\frac{d}{dx}\left[f(x)^{g(x)}\right] = [f(x)]^{g(x)} \left[ \frac{g(x)f'(x)}{f(x)} + g'(x)\ln f(x) \right]" />
+            <ProofBox title="查看推導過程 (對數微分法)">
+              <p className="mb-2">這是一個標準的指對數型函數，我們使用對數微分法來推導。</p>
+              <ol className="list-decimal list-inside space-y-3 text-gray-800">
+                <li>令對象為 <InlineMath math="y" />：
+                  <BlockMath math="y = f(x)^{g(x)}" />
+                </li>
+                <li>等號兩邊取自然對數 <InlineMath math="\ln" />，並利用對數次方的性質提出 <InlineMath math="g(x)" />：
+                  <BlockMath math="\ln y = \ln[f(x)^{g(x)}] = g(x)\ln f(x)" />
+                </li>
+                <li>等號兩邊同時對 <InlineMath math="x" /> 使用隱函數微分。左邊運用連鎖律，右邊運用乘法法則「前微後不微 + 前不微後微」：
+                  <BlockMath math="\frac{1}{y} \cdot \frac{dy}{dx} = g'(x)\ln f(x) + g(x) \cdot \frac{d}{dx}[\ln f(x)]" />
+                  <BlockMath math="\frac{1}{y} \cdot \frac{dy}{dx} = g'(x)\ln f(x) + g(x) \cdot \frac{f'(x)}{f(x)}" />
+                </li>
+                <li>將 <InlineMath math="y" /> 移向至等式右邊乘上：
+                  <BlockMath math="\frac{dy}{dx} = y \left[ \frac{g(x)f'(x)}{f(x)} + g'(x)\ln f(x) \right]" />
+                </li>
+                <li>最後將 <InlineMath math="y = f(x)^{g(x)}" /> 替換回去即完成證明：
+                  <BlockMath math="\frac{dy}{dx} = [f(x)]^{g(x)} \left[ \frac{g(x)f'(x)}{f(x)} + g'(x)\ln f(x) \right]" />
+                </li>
+              </ol>
+            </ProofBox>
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 }

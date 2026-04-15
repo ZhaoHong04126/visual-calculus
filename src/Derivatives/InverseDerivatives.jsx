@@ -1,6 +1,27 @@
 // src/Derivatives/InverseDerivatives.jsx
 import React from 'react';
 import { InlineMath, BlockMath } from '../components/Math';
+import './ProofBox.css';
+
+const ProofBox = ({ title = "查看證明", children }) => {
+  return (
+    <details className="proof-box">
+      <summary>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <span style={{ marginRight: '8px', fontSize: '18px' }}>📝</span>
+          {title}
+        </div>
+        <div>
+          <span className="proof-toggle-btn expand-text">展開證明 ▼</span>
+          <span className="proof-toggle-btn collapse-text">收起證明 ▲</span>
+        </div>
+      </summary>
+      <div className="proof-content">
+        {children}
+      </div>
+    </details>
+  );
+};
 
 export default function InverseDerivatives() {
   return (
@@ -42,21 +63,99 @@ export default function InverseDerivatives() {
       </div>
 
       <div className="math-box p-6 bg-blue-50 rounded-lg shadow-sm border border-blue-200">
-        <h3 className="text-xl font-bold mb-3 text-blue-800">5.2 反三角函數的微分</h3>
+        <h3 className="text-xl font-bold mb-3 text-blue-800">5.2 反三角函數的微分與證明</h3>
         <p className="mb-4 text-gray-700">
-          利用反函數的微分法則與隱函數微分，我們可以推導出各種反三角函數的微分公式，以下為最常用的幾個：
+          利用隱函數微分與三角恆等式，我們可以推導出六個反三角函數的微分公式。底下為公式總覽與詳細證明過程：
         </p>
-        <ul className="list-disc list-inside space-y-3 text-gray-800 bg-white p-4 rounded border border-blue-100">
-          <li>
-            <InlineMath math="\frac{d}{dx}(\arcsin x) = \frac{1}{\sqrt{1 - x^2}}" /> , <InlineMath math="(-1 < x < 1)" />
-          </li>
-          <li>
-            <InlineMath math="\frac{d}{dx}(\arccos x) = -\frac{1}{\sqrt{1 - x^2}}" /> , <InlineMath math="(-1 < x < 1)" />
-          </li>
-          <li>
-            <InlineMath math="\frac{d}{dx}(\arctan x) = \frac{1}{1 + x^2}" />
-          </li>
-        </ul>
+
+        <div className="space-y-4 mt-4 text-base">
+          {/* Arcsin */}
+          <div className="p-4 bg-white rounded border border-blue-200">
+            <strong>5.2.1 反正弦函數 (arcsin)：</strong>
+            <div className="text-sm text-gray-500 float-right mt-1">(-1 &lt; x &lt; 1)</div>
+            <BlockMath math="\dfrac{d}{dx}[\arcsin x] = \dfrac{1}{\sqrt{1 - x^2}}" />
+            <ProofBox title="查看證明 (隱函數微分)">
+              <ol className="list-decimal list-inside space-y-1 my-2">
+                <li>令 <InlineMath math="y = \arcsin x" />，則 <InlineMath math="\sin y = x" />，且 <InlineMath math="y \in [-\frac{\pi}{2}, \frac{\pi}{2}]" />。</li>
+                <li>對等式兩邊同時對 <InlineMath math="x" /> 微分：
+                  <BlockMath math="\cos y \cdot \dfrac{dy}{dx} = 1" />
+                </li>
+                <li>移項得到：<BlockMath math="\dfrac{dy}{dx} = \dfrac{1}{\cos y}" /></li>
+                <li>因為 <InlineMath math="y \in [-\frac{\pi}{2}, \frac{\pi}{2}]" />，<InlineMath math="\cos y \geq 0" />。因此 <InlineMath math="\cos y = \sqrt{1 - \sin^2 y} = \sqrt{1 - x^2}" />。</li>
+                <li>代回原式即得：<BlockMath math="\dfrac{dy}{dx} = \dfrac{1}{\sqrt{1 - x^2}}" /></li>
+              </ol>
+            </ProofBox>
+          </div>
+
+          {/* Arccos */}
+          <div className="p-4 bg-white rounded border border-blue-200">
+            <strong>5.2.2 反餘弦函數 (arccos)：</strong>
+            <div className="text-sm text-gray-500 float-right mt-1">(-1 &lt; x &lt; 1)</div>
+            <BlockMath math="\dfrac{d}{dx}[\arccos x] = -\dfrac{1}{\sqrt{1 - x^2}}" />
+            <ProofBox title="查看證明 (利用餘角關係)">
+              <p className="my-2">利用恆等式 <InlineMath math="\arcsin x + \arccos x = \dfrac{\pi}{2}" />。兩邊對 <InlineMath math="x" /> 微分：</p>
+              <BlockMath math="\dfrac{d}{dx}[\arcsin x] + \dfrac{d}{dx}[\arccos x] = 0" />
+              <p className="my-2">因此 <InlineMath math="\dfrac{d}{dx}[\arccos x] = - \dfrac{d}{dx}[\arcsin x] = -\dfrac{1}{\sqrt{1 - x^2}}" />。</p>
+            </ProofBox>
+          </div>
+
+          {/* Arctan */}
+          <div className="p-4 bg-white rounded border border-blue-200">
+            <strong>5.2.3 反正切函數 (arctan)：</strong>
+            <BlockMath math="\dfrac{d}{dx}[\arctan x] = \dfrac{1}{1 + x^2}" />
+            <ProofBox title="查看證明 (隱函數微分)">
+              <ol className="list-decimal list-inside space-y-1 my-2">
+                <li>令 <InlineMath math="y = \arctan x" />，則 <InlineMath math="\tan y = x" />，且 <InlineMath math="y \in (-\frac{\pi}{2}, \frac{\pi}{2})" />。</li>
+                <li>兩邊對 <InlineMath math="x" /> 微分：
+                  <BlockMath math="\sec^2 y \cdot \dfrac{dy}{dx} = 1" />
+                </li>
+                <li>移項得到：<BlockMath math="\dfrac{dy}{dx} = \dfrac{1}{\sec^2 y}" /></li>
+                <li>將 <InlineMath math="\sec^2 y = 1 + \tan^2 y = 1 + x^2" /> 代入。</li>
+                <li>即得：<BlockMath math="\dfrac{dy}{dx} = \dfrac{1}{1 + x^2}" /></li>
+              </ol>
+            </ProofBox>
+          </div>
+
+          {/* Arccot */}
+          <div className="p-4 bg-white rounded border border-blue-200">
+            <strong>5.2.4 反餘切函數 (arccot)：</strong>
+            <BlockMath math="\dfrac{d}{dx}[\text{arccot } x] = -\dfrac{1}{1 + x^2}" />
+            <ProofBox title="查看證明 (利用餘角關係)">
+              <p className="my-2">利用恆等式 <InlineMath math="\arctan x + \text{arccot } x = \dfrac{\pi}{2}" />，兩邊微分即得：</p>
+              <BlockMath math="\dfrac{d}{dx}[\text{arccot } x] = -\dfrac{1}{1 + x^2}" />
+            </ProofBox>
+          </div>
+
+          {/* Arcsec & Arccsc 並列 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-4 bg-white rounded border border-blue-200">
+              <strong>5.2.5 反正割函數 (arcsec)：</strong>
+              <div className="text-sm text-gray-500 float-right mt-1">(|x| &gt; 1)</div>
+              <BlockMath math="\dfrac{d}{dx}[\text{arcsec } x] = \dfrac{1}{|x|\sqrt{x^2 - 1}}" />
+              <ProofBox title="查看證明">
+                <ol className="list-decimal list-inside space-y-1 my-2">
+                  <li>令 <InlineMath math="y = \text{arcsec } x" />，則 <InlineMath math="\sec y = x" />。</li>
+                  <li>兩邊對 <InlineMath math="x" /> 微分：
+                    <BlockMath math="\sec y \tan y \cdot \dfrac{dy}{dx} = 1" />
+                  </li>
+                  <li>移項：<BlockMath math="\dfrac{dy}{dx} = \dfrac{1}{\sec y \tan y}" /></li>
+                  <li>利用 <InlineMath math="\sec y = x" />，而根據值域定義，<InlineMath math="\sec y \tan y" /> 始終與 <InlineMath math="x" /> 同號，因此 <InlineMath math="\sec y \tan y = |x|\sqrt{x^2 - 1}" />。</li>
+                  <li>即得：<BlockMath math="\dfrac{dy}{dx} = \dfrac{1}{|x|\sqrt{x^2 - 1}}" /></li>
+                </ol>
+              </ProofBox>
+            </div>
+
+            <div className="p-4 bg-white rounded border border-blue-200">
+              <strong>5.2.6 反餘割函數 (arccsc)：</strong>
+              <div className="text-sm text-gray-500 float-right mt-1">(|x| &gt; 1)</div>
+              <BlockMath math="\dfrac{d}{dx}[\text{arccsc } x] = -\dfrac{1}{|x|\sqrt{x^2 - 1}}" />
+              <ProofBox title="查看證明 (利用餘角關係)">
+                <p className="my-2">利用恆等式 <InlineMath math="\text{arcsec } x + \text{arccsc } x = \dfrac{\pi}{2}" />，兩邊微分：</p>
+                <BlockMath math="\dfrac{d}{dx}[\text{arccsc } x] = -\dfrac{1}{|x|\sqrt{x^2 - 1}}" />
+              </ProofBox>
+            </div>
+          </div>
+        </div>
       </div>
 
     </section>
