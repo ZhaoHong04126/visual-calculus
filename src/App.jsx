@@ -14,6 +14,7 @@ import Integrals from './Integrals/Integrals';
 import IntegralsApps from './IntegralsApps/IntegralsApps';
 import Formulas from './Formulas/Formulas';
 
+
 // ChatGPT 風格側邊欄圖示（兩欄面板）
 function SidebarIcon() {
   return (
@@ -129,6 +130,7 @@ export default function App() {
             <Route path="/integrals" element={<Integrals />} />
             <Route path="/integrals-apps" element={<IntegralsApps />} />
             <Route path="/formulas" element={<Formulas />} />
+
           </Routes>
         </div>
       </main>

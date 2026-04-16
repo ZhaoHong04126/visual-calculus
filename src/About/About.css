@@ -142,6 +142,36 @@
   font-size: 0.9rem;
 }
 
+/* Resources List Compact */
+.resources-list-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.resource-link-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.resource-link-btn:hover {
+  transform: translateY(-2px);
+  border-color: #6c5ce7;
+  color: #6c5ce7;
+  box-shadow: 0 5px 15px rgba(108, 92, 231, 0.1);
+}
+
 /* Footer */
 .about-footer {
   text-align: center;

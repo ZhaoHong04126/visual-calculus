@@ -71,6 +71,16 @@ const About = () => {
         </div>
       </section>
 
+      <section className="about-section">
+        <h2 className="section-title">🔗 資料參考與資源</h2>
+        <div className="resources-list-compact">
+          <a href="#" className="resource-link-btn">📚 作者的學校上課講義</a>
+          <a href="https://zh.wikipedia.org/zh-tw/%E5%BE%AE%E7%A7%AF%E5%88%86%E5%AD%A6" target="_blank" rel="noopener noreferrer" className="resource-link-btn">🌐 維基百科：微積分</a>
+          <a href="https://zh.wikipedia.org/zh-tw/%E5%87%BD%E6%95%B0" target="_blank" rel="noopener noreferrer" className="resource-link-btn">📐 維基百科：函數</a>
+          <a href="https://www.math.ntu.edu.tw/~hchu/Calculus/" target="_blank" rel="noopener noreferrer" className="resource-link-btn">🎓 台大數學系</a>
+        </div>
+      </section>
+
       <footer className="about-footer">
         <p>Made with ❤️ for Calculus Learners.</p>
       </footer>
