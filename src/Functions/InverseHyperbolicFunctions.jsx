@@ -6,7 +6,7 @@ import FunctionGraph from '../components/FunctionGraph';
 export default function InverseHyperbolicFunctions() {
   return (
     <section className="subsection mt-12">
-      <h2 className="section-title">6. 反雙曲函數 (Inverse Hyperbolic Functions)</h2>
+      <h2 className="section-title">7. 反雙曲函數 (Inverse Hyperbolic Functions)</h2>
       
       <p className="mb-4 text-gray-700">
         由於部分雙曲函數具有一對一的特性（或可像反三角函數那樣限制定義域使其一對一），它們也都具有反函數。
@@ -15,7 +15,7 @@ export default function InverseHyperbolicFunctions() {
 
       {/* 6.1 定義與對數形式 */}
       <div className="math-box mb-8 p-6 bg-indigo-50 rounded-lg shadow-sm border border-indigo-200">
-        <h3 className="text-xl font-bold mb-4 text-indigo-800">6.1 六大反雙曲函數</h3>
+        <h3 className="text-xl font-bold mb-4 text-indigo-800">7.1 六大反雙曲函數</h3>
         <p className="mb-4 text-gray-800">以下列出六個反雙曲函數與其對數公式和圖形：</p>
         
         <div className="concept-grid mt-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
@@ -133,7 +133,7 @@ export default function InverseHyperbolicFunctions() {
 
       {/* 6.2 證明：反雙曲函數的對數形式 */}
       <div className="math-box mt-8">
-        <h3 className="text-xl font-bold mb-3 text-indigo-800">6.2 證明：對數形式的推導</h3>
+        <h3 className="text-xl font-bold mb-3 text-indigo-800">7.2 證明：對數形式的推導</h3>
         <p className="mb-4 text-gray-800">
           透過解一元二次方程式，我們能推導出所有反雙曲函數的自然對數表達式。點擊下方各函數的展開區塊即可查看完整數學證明：
         </p>

@@ -6,14 +6,14 @@ import FunctionGraph from '../components/FunctionGraph';
 export default function TrigFunctions() {
   return (
     <section className="subsection">
-      <h2 className="section-title">1. 三角函數 (Trigonometric Functions)</h2>
+      <h2 className="section-title">2. 三角函數 (Trigonometric Functions)</h2>
       <p className="mb-4">
         三角函數是微積分中極為重要的基礎，它們用來描述週期性變化，如波動、圓周運動等。
         最常見的基本三角函數有正弦 (Sine) 與餘弦 (Cosine)。
       </p>
 
       <div className="math-box mb-8 p-6 bg-red-50 rounded-lg shadow-sm border border-red-200">
-        <h3 className="text-xl font-bold mb-4 text-red-800">1.1 六大基本三角函數</h3>
+        <h3 className="text-xl font-bold mb-4 text-red-800">2.1 六大基本三角函數</h3>
         <p className="mb-4 text-gray-800">
           在單位圓上，對於任意實數 <InlineMath math="\theta" />，對應的點座標定義了基本函數 <InlineMath math="\cos \theta" /> 與 <InlineMath math="\sin \theta" />。
           其餘四個三角函數皆可由這兩者推導定義：<InlineMath math="\tan \theta = \frac{\sin \theta}{\cos \theta}" />、<InlineMath math="\cot \theta = \frac{\cos \theta}{\sin \theta}" />、<InlineMath math="\sec \theta = \frac{1}{\cos \theta}" /> 以及 <InlineMath math="\csc \theta = \frac{1}{\sin \theta}" />。

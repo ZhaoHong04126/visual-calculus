@@ -6,7 +6,7 @@ import FunctionGraph from '../components/FunctionGraph';
 export default function HyperbolicFunctions() {
   return (
     <section className="subsection mt-12">
-      <h2 className="section-title">5. 雙曲函數 (Hyperbolic Functions)</h2>
+      <h2 className="section-title">6. 雙曲函數 (Hyperbolic Functions)</h2>
       
       <p className="mb-4">
         雙曲函數在許多應用數學與物理領域中頻繁出現，例如吊橋懸索的形狀（懸鏈線）或是狹義相對論中的計算。
@@ -15,7 +15,7 @@ export default function HyperbolicFunctions() {
 
       {/* 5.1 定義與圖形 */}
       <div className="math-box mb-8 p-6 bg-purple-50 rounded-lg shadow-sm border border-purple-200">
-        <h3 className="text-xl font-bold mb-4 text-purple-800">5.1 基本雙曲函數與定義</h3>
+        <h3 className="text-xl font-bold mb-4 text-purple-800">6.1 基本雙曲函數與定義</h3>
         <p className="mb-4 text-gray-800">六大基本雙曲函數的代數定義如下：</p>
         
         <div className="concept-grid mt-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>

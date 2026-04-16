@@ -46,33 +46,33 @@ export default function Asymptotes() {
             <strong className="block mb-2 text-gray-800">極限定義：</strong>
             <p className="mb-4 text-gray-700">若函數 <InlineMath settings={{ strict: false }} math="f(x)" /> 滿足下列六種極限情況中的<strong>任何一種</strong>：</p>
             
-            {/* 強制響應式呈現 2x3 矩陣，小螢幕自動縮列 */}
+            {/* 強制響應式呈現 2x3 矩陣 */}
             <div style={{ 
               display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(180px, 100%), 1fr))', 
+              gridTemplateColumns: 'repeat(3, 1fr)', 
               gap: '12px', 
               marginBottom: '16px',
               width: '100%'
             }}>
               {/* Row 1: +infinity */}
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
                 <InlineMath math="\lim_{x \to a} f(x) = +\infty" />
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
                 <InlineMath math="\lim_{x \to a^+} f(x) = +\infty" />
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
                 <InlineMath math="\lim_{x \to a^-} f(x) = +\infty" />
               </div>
               
               {/* Row 2: -infinity */}
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
                 <InlineMath math="\lim_{x \to a} f(x) = -\infty" />
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
                 <InlineMath math="\lim_{x \to a^+} f(x) = -\infty" />
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', minWidth: 0, overflow: 'hidden' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 8px', backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
                 <InlineMath math="\lim_{x \to a^-} f(x) = -\infty" />
               </div>
             </div>

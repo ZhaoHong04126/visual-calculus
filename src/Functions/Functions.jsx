@@ -2,9 +2,10 @@
 import React from 'react';
 import './Functions.css';
 
+import WhatIsAFunction from './WhatIsAFunction';
 import TrigFunctions from './TrigFunctions';
-import InverseFunctions from './InverseFunctions';
 import ExpLogFunctions from './ExpLogFunctions';
+import InverseFunctions from './InverseFunctions';
 import InverseTrigFunctions from './InverseTrigFunctions';
 import HyperbolicFunctions from './HyperbolicFunctions';
 import InverseHyperbolicFunctions from './InverseHyperbolicFunctions';
@@ -18,6 +19,7 @@ export default function Functions() {
       </header>
 
       {/* 依序渲染這幾個小節 */}
+      <WhatIsAFunction />
       <TrigFunctions />
       <ExpLogFunctions />
       <InverseFunctions />
