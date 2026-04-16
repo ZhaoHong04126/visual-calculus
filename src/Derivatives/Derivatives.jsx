@@ -7,7 +7,17 @@ import HigherOrderDerivatives from './HigherOrderDerivatives';
 import InverseDerivatives from './InverseDerivatives';
 import '../Limits/Limits.css'; 
 
+import SectionNav from '../components/SectionNav';
+
 export default function Derivatives() {
+  const sections = [
+    { id: 'def', title: '導數定義' },
+    { id: 'rules', title: '微分公式' },
+    { id: 'chain', title: '鏈鎖律' },
+    { id: 'higher', title: '高階導數' },
+    { id: 'inverse-diff', title: '反函數微分' },
+  ];
+
   return (
     <div className="topic-content">
       <header className="topic-header">
@@ -17,11 +27,13 @@ export default function Derivatives() {
         </p>
       </header>
 
-      <DerivativeDefinition />
-      <DifferentiationRules />
-      <ChainRule />
-      <HigherOrderDerivatives />
-      <InverseDerivatives />
+      <SectionNav sections={sections} />
+
+      <div id="def"><DerivativeDefinition /></div>
+      <div id="rules"><DifferentiationRules /></div>
+      <div id="chain"><ChainRule /></div>
+      <div id="higher"><HigherOrderDerivatives /></div>
+      <div id="inverse-diff"><InverseDerivatives /></div>
       
     </div>
   );

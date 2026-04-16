@@ -135,7 +135,8 @@
 
 /* ================== 內容區包裝 ================== */
 .content-wrapper {
-  padding: clamp(3.5rem, 5vw, 4.5rem) clamp(1.5rem, 4vw, 4rem) clamp(2rem, 3vw, 3rem) clamp(2rem, 5vw, 5rem);
+  /* padding-top is now handled by individual page headers to allow sticky nav to hit top:0 */
+  padding: 0 clamp(1.5rem, 4vw, 4rem) clamp(2rem, 3vw, 3rem) clamp(2rem, 5vw, 5rem);
   overflow-y: auto;
   overflow-x: hidden; /* 禁止水平滾動 */
   flex: 1;
@@ -143,6 +144,12 @@
   max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* 修正捲動到 ID 時被導覽列遮住的問題 */
+.topic-content > div[id] {
+  scroll-margin-top: 80px;
 }
 
 .welcome-text {
@@ -157,7 +164,7 @@
 /* 平板 (768px - 1024px) */
 @media (max-width: 1024px) {
   .content-wrapper {
-    padding: 4rem 2rem 2.5rem 3rem;
+    padding: 0 2rem 2.5rem 3rem;
   }
 }
 
@@ -195,7 +202,7 @@
   }
 
   .content-wrapper {
-    padding: 4.5rem 1.25rem 2rem 1.25rem;
+    padding: 0 1.25rem 2rem 1.25rem;
     max-width: 100%;
   }
 
@@ -219,7 +226,7 @@
     border-radius: 8px;
     color: #475569;
     cursor: pointer;
-    z-index: 100;
+    z-index: 300;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
   }

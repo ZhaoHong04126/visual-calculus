@@ -5,7 +5,7 @@ import { InlineMath, BlockMath } from '../components/Math';
 export default function InverseFunctions() {
   return (
     <section className="subsection">
-      <h2 className="section-title">4. 反函數 (Inverse Functions)</h2>
+      <h2 className="section-title">5. 反函數 (Inverse Functions)</h2>
 
       <p className="mb-4">
         在探討指數與反三角函數之前，我們必須先了解「反函數」的核心概念。簡單來說，反函數的作用是「將原本函數的對應關係反推回去」。但我們必須先確認，這個反推的關係，是否仍然是一個合理的函數？

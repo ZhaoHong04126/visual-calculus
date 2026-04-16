@@ -6,7 +6,7 @@ import FunctionGraph from '../components/FunctionGraph';
 export default function ExpLogFunctions() {
   return (
     <section className="subsection mt-12">
-      <h2 className="section-title text-2xl font-bold mb-4 border-b-2 border-green-500 pb-2">3. 指數與對數函數 (Exponential and Logarithmic Functions)</h2>
+      <h2 className="section-title text-2xl font-bold mb-4 border-b-2 border-green-500 pb-2">4. 指數與對數函數 (Exponential and Logarithmic Functions)</h2>
       
       <p className="mb-4 text-gray-700">
         指數函數與對數函數是微積分中最核心的超越函數。在探討它們的微積分性質之前，我們必須先釐清它們的代數定義與幾何行為。
@@ -16,7 +16,7 @@ export default function ExpLogFunctions() {
           2.1 指數函數
       ========================================== */}
       <div className="math-box mb-8 p-6 bg-green-50 rounded-lg shadow-sm border border-green-200">
-        <h3 className="text-xl font-bold mb-3 text-green-800">3.1 指數函數 (Exponential Functions)</h3>
+        <h3 className="text-xl font-bold mb-3 text-green-800">4.1 指數函數 (Exponential Functions)</h3>
         <p className="mb-4 text-gray-800">
           一般形式的指數函數定義為 <InlineMath math="f(x) = a^x" />，其中底數 <InlineMath math="a > 0" /> 且 <InlineMath math="a \neq 1" />。
           根據底數 <InlineMath math="a" /> 的不同，函數圖形分為「指數成長」與「指數衰退」兩種情形。
@@ -81,7 +81,7 @@ export default function ExpLogFunctions() {
           2.2 對數函數
       ========================================== */}
       <div className="math-box mb-8 p-6 bg-cyan-50 rounded-lg shadow-sm border border-cyan-200">
-        <h3 className="text-xl font-bold mb-3 text-cyan-800">3.2 對數函數 (Logarithmic Functions)</h3>
+        <h3 className="text-xl font-bold mb-3 text-cyan-800">4.2 對數函數 (Logarithmic Functions)</h3>
         <p className="mb-4 text-gray-800">
           對數函數是指數函數的<strong>反函數</strong>。由於不論是生長還是衰退的指數函數，都能通過水平線測試（是一對一函數），因此它們具有反函數。
         </p>
@@ -151,7 +151,7 @@ export default function ExpLogFunctions() {
           2.3 尤拉數 e 與自然對數
       ========================================== */}
       <div className="math-box p-6 bg-yellow-50 rounded-lg shadow-sm border border-yellow-200">
-        <h3 className="text-xl font-bold mb-3 text-yellow-800">3.3 尤拉數 <InlineMath math="e" /> 與自然對數</h3>
+        <h3 className="text-xl font-bold mb-3 text-yellow-800">4.3 尤拉數 <InlineMath math="e" /> 與自然對數</h3>
         
         <div className="concept-grid">
           <div className="concept-card diff-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', borderColor: '#fef08a', backgroundColor: '#fefce8' }}>

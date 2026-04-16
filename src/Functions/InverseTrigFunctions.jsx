@@ -6,7 +6,7 @@ import FunctionGraph from '../components/FunctionGraph';
 export default function InverseTrigFunctions() {
   return (
     <section className="subsection mt-12">
-      <h2 className="section-title">5. 反三角函數 (Inverse Trigonometric Functions)</h2>
+      <h2 className="section-title">6. 反三角函數 (Inverse Trigonometric Functions)</h2>
       
       <p className="mb-4">
         所有的三角函數（如正弦、餘弦）都是週期函數，這意味著它們的圖形會像波浪一樣反覆震盪，絕對無法通過「水平線測試」。換句話說，它們都不是「一對一」函數。
@@ -17,7 +17,7 @@ export default function InverseTrigFunctions() {
 
       {/* 4.1 三大核心反三角函數 */}
       <div className="math-box mb-8 p-6 bg-blue-50 rounded-lg shadow-sm border border-blue-200">
-        <h3 className="text-xl font-bold mb-4 text-blue-800">5.1 定義與限制區間</h3>
+        <h3 className="text-xl font-bold mb-4 text-blue-800">6.1 定義與限制區間</h3>
       <div className="concept-grid mt-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
         
         {/* arcsin */}
@@ -136,7 +136,7 @@ export default function InverseTrigFunctions() {
 
       {/* 4.2 複合函數與直角三角形技巧 */}
       <div className="math-box mt-8">
-        <h3 className="text-xl font-bold mb-3 text-blue-800">5.2 幾何輔助：直角三角形法</h3>
+        <h3 className="text-xl font-bold mb-3 text-blue-800">6.2 幾何輔助：直角三角形法</h3>
         <p className="mb-2">
           當我們需要計算形如 <InlineMath settings={{ strict: false }} math="\cos(\arctan x)" /> 這種「三角函數包著反三角函數」的式子時，最有效的方法是利用直角三角形。
         </p>
