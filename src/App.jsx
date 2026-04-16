@@ -9,8 +9,10 @@ import Functions from './Functions/Functions';
 import Limits from './Limits/Limits';
 import Continuity from './Continuity/Continuity';
 import Derivatives from './Derivatives/Derivatives';
+import DerivativesApps from './DerivativesApps/DerivativesApps';
 import Integrals from './Integrals/Integrals';
-import Series from './Series/Series';
+import IntegralsApps from './IntegralsApps/IntegralsApps';
+import Formulas from './Formulas/Formulas';
 
 // ChatGPT 風格側邊欄圖示（兩欄面板）
 function SidebarIcon() {
@@ -91,13 +93,23 @@ export default function App() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/integrals" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第五章：積分學
+            <NavLink to="/derivatives-apps" className={({ isActive }) => isActive ? "active-link" : ""}>
+              第五章：微分的應用
             </NavLink>
           </li>
           <li>
-            <NavLink to="/series" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第六章：無窮級數
+            <NavLink to="/integrals" className={({ isActive }) => isActive ? "active-link" : ""}>
+              第六章：反導數與積分
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/integrals-apps" className={({ isActive }) => isActive ? "active-link" : ""}>
+              第七章：積分的應用
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/formulas" className={({ isActive }) => isActive ? "active-link" : ""}>
+              第八章：公式整理
             </NavLink>
           </li>
         </ul>
@@ -113,8 +125,10 @@ export default function App() {
             <Route path="/limits" element={<Limits />} />
             <Route path="/continuity" element={<Continuity />} />
             <Route path="/derivatives" element={<Derivatives />} />
+            <Route path="/derivatives-apps" element={<DerivativesApps />} />
             <Route path="/integrals" element={<Integrals />} />
-            <Route path="/series" element={<Series />} />
+            <Route path="/integrals-apps" element={<IntegralsApps />} />
+            <Route path="/formulas" element={<Formulas />} />
           </Routes>
         </div>
       </main>

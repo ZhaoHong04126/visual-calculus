@@ -64,8 +64,8 @@ const About = () => {
           <div className="guide-card">
             <div className="guide-number">2</div>
             <div className="guide-text">
-              <h4>核心應用（4-6章）</h4>
-              <p>深入探討微分學、積分學與無窮級數，解決現代科學的核心問題。</p>
+              <h4>核心應用（4-8章）</h4>
+              <p>深入探討微分與積分的層層應用，並提供精簡的公式整理，解決現代科學的核心問題。</p>
             </div>
           </div>
         </div>

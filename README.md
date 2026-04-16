@@ -48,6 +48,25 @@
 *   基礎微分法則、鏈鎖律與高階導數
 *   反函數微分與雙曲函數分析。
 
+### **第五章：微分的應用 (Applications of Derivatives)**
+*   極值問題、臨界點與絕對極值。
+*   羅爾定理與均值定理 (MVT)。
+*   單調性測試、凹凸性與二階導數測試。
+*   羅必達法則 (L'Hôpital's rule)。
+
+### **第六章：反導數與積分 (Antiderivatives & Integrals)**
+*   不定積分與反導數的概念。
+*   定積分的黎曼和與幾何解釋。
+*   微積分基本定理 (FTC)。
+
+### **第七章：積分的應用 (Applications of Integrals)**
+*   平面區域面積與旋轉體體積。
+*   弧長與旋轉曲面積。
+
+### **第八章：公式整理 (Formulas)**
+*   常用微分與積分公式快速查詢。
+*   三角函數、雙曲函數公式彙整。
+
 ---
 
 ## 🛠️ 技術底層 (Tech Stack)
@@ -94,8 +113,10 @@ src/
 ├── Limits/             # 第二章：極限論
 ├── Continuity/         # 第三章：連續性理論
 ├── Derivatives/        # 第四章：導數與微分學
-├── Integrals/          # 第五章：積分學 (開發中)
-├── Series/             # 第六章：無窮級數 (開發中)
+├── DerivativesApps/    # 第五章：微分的應用
+├── Integrals/          # 第六章：反導數與積分
+├── IntegralsApps/      # 第七章：積分的應用
+├── Formulas/           # 第八章：公式整理
 └── App.jsx             # 路由分發與主框架
 ```
 
