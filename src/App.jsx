@@ -6,6 +6,7 @@ import './App.css';
 import Introduction from './Introduction/Introduction';
 import Functions from './Functions/Functions';
 import Limits from './Limits/Limits';
+import Continuity from './Continuity/Continuity';
 import Derivatives from './Derivatives/Derivatives';
 import Integrals from './Integrals/Integrals';
 import Series from './Series/Series';
@@ -70,22 +71,27 @@ export default function App() {
           </li>
           <li>
             <NavLink to="/limits" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第二章：極限與連續
+              第二章：極限
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/continuity" className={({ isActive }) => isActive ? "active-link" : ""}>
+              第三章：連續
             </NavLink>
           </li>
           <li>
             <NavLink to="/derivatives" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第三章：導數與微分
+              第四章：導數與微分
             </NavLink>
           </li>
           <li>
             <NavLink to="/integrals" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第四章：積分學
+              第五章：積分學
             </NavLink>
           </li>
           <li>
             <NavLink to="/series" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第五章：無窮級數
+              第六章：無窮級數
             </NavLink>
           </li>
         </ul>
@@ -98,6 +104,7 @@ export default function App() {
             <Route path="/" element={<Introduction />} />
             <Route path="/functions" element={<Functions />} />
             <Route path="/limits" element={<Limits />} />
+            <Route path="/continuity" element={<Continuity />} />
             <Route path="/derivatives" element={<Derivatives />} />
             <Route path="/integrals" element={<Integrals />} />
             <Route path="/series" element={<Series />} />
