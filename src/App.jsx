@@ -4,6 +4,7 @@ import './App.css';
 
 // 引入各個主題的進入點元件
 import Introduction from './Introduction/Introduction';
+import About from './About/About';
 import Functions from './Functions/Functions';
 import Limits from './Limits/Limits';
 import Continuity from './Continuity/Continuity';
@@ -61,6 +62,11 @@ export default function App() {
         <ul className="nav-links">
           <li>
             <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""} end>
+              歡迎使用
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/introduction" className={({ isActive }) => isActive ? "active-link" : ""}>
               第零章：微積分簡介
             </NavLink>
           </li>
@@ -101,7 +107,8 @@ export default function App() {
       <main className="main-content">
         <div className="content-wrapper">
           <Routes>
-            <Route path="/" element={<Introduction />} />
+            <Route path="/" element={<About />} />
+            <Route path="/introduction" element={<Introduction />} />
             <Route path="/functions" element={<Functions />} />
             <Route path="/limits" element={<Limits />} />
             <Route path="/continuity" element={<Continuity />} />
