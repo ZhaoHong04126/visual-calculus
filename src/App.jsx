@@ -22,8 +22,8 @@ function SidebarIcon() {
 }
 
 export default function App() {
-  // 控制側邊欄開關的狀態，預設為開啟 (true)
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  // 控制側邊欄開關的狀態，預設為開啟 (桌面版)，手機版預設為隱藏
+  const [isSidebarOpen, setIsSidebarOpen] = useState(() => window.innerWidth > 768);
 
   // 切換側邊欄的函數
   const toggleSidebar = () => {
