@@ -125,7 +125,7 @@ export default function HyperbolicDerivatives() {
           {/* arcosh */}
           <div className="p-4 bg-white rounded border border-orange-200">
             <strong>6.2.2 反雙曲餘弦 (arcosh)：</strong>
-            <div className="text-sm text-gray-500 float-right mt-1">(x &gt; 1)</div>
+            <div className="text-sm text-gray-500 float-right mt-1">(<InlineMath math="x > 1" />)</div>
             <BlockMath math="\dfrac{d}{dx}[\text{arcosh } x] = \dfrac{1}{\sqrt{x^2 - 1}}" />
             <ProofBox title="查看證明">
               <p className="my-2">令 <InlineMath math="y = \text{arcosh } x" />，則 <InlineMath math="\cosh y = x" />。兩邊對 <InlineMath math="x" /> 微分：</p>
@@ -138,7 +138,7 @@ export default function HyperbolicDerivatives() {
           {/* artanh */}
           <div className="p-4 bg-white rounded border border-orange-200">
             <strong>6.2.3 反雙曲正切 (artanh)：</strong>
-            <div className="text-sm text-gray-500 float-right mt-1">(|x| &lt; 1)</div>
+            <div className="text-sm text-gray-500 float-right mt-1">(<InlineMath math="|x| < 1" />)</div>
             <BlockMath math="\dfrac{d}{dx}[\text{artanh } x] = \dfrac{1}{1 - x^2}" />
             <ProofBox title="查看證明">
               <p className="my-2">令 <InlineMath math="y = \text{artanh } x" />，則 <InlineMath math="\tanh y = x" />。兩邊對 <InlineMath math="x" /> 微分：</p>
@@ -151,7 +151,7 @@ export default function HyperbolicDerivatives() {
           {/* arcoth */}
           <div className="p-4 bg-white rounded border border-orange-200">
             <strong>6.2.4 反雙曲餘切 (arcoth)：</strong>
-            <div className="text-sm text-gray-500 float-right mt-1">(|x| &gt; 1)</div>
+            <div className="text-sm text-gray-500 float-right mt-1">(<InlineMath math="|x| > 1" />)</div>
             <BlockMath math="\dfrac{d}{dx}[\text{arcoth } x] = \dfrac{1}{1 - x^2}" />
             <ProofBox title="查看證明">
               <p className="my-2">令 <InlineMath math="y = \text{arcoth } x" />，則 <InlineMath math="\coth y = x" />。兩邊對 <InlineMath math="x" /> 微分：</p>
@@ -164,7 +164,7 @@ export default function HyperbolicDerivatives() {
           {/* arsech */}
           <div className="p-4 bg-white rounded border border-orange-200">
             <strong>6.2.5 反雙曲正割 (arsech)：</strong>
-            <div className="text-sm text-gray-500 float-right mt-1">(0 &lt; x &lt; 1)</div>
+            <div className="text-sm text-gray-500 float-right mt-1">(<InlineMath math="0 < x < 1" />)</div>
             <BlockMath math="\dfrac{d}{dx}[\text{arsech } x] = \dfrac{-1}{x\sqrt{1 - x^2}}" />
             <ProofBox title="查看證明">
               <p className="my-2">令 <InlineMath math="y = \text{arsech } x" />，則 <InlineMath math="\text{sech } y = x" />。即 <InlineMath math="\cosh y = \frac{1}{x}" />。兩邊微分：</p>
@@ -177,7 +177,7 @@ export default function HyperbolicDerivatives() {
           {/* arcsch */}
           <div className="p-4 bg-white rounded border border-orange-200">
             <strong>6.2.6 反雙曲餘割 (arcsch)：</strong>
-            <div className="text-sm text-gray-500 float-right mt-1">(x \neq 0)</div>
+            <div className="text-sm text-gray-500 float-right mt-1">(<InlineMath math="x \neq 0" />)</div>
             <BlockMath math="\dfrac{d}{dx}[\text{arcsch } x] = \dfrac{-1}{|x|\sqrt{1 + x^2}}" />
             <ProofBox title="查看證明">
               <p className="my-2">令 <InlineMath math="y = \text{arcsch } x" />，則 <InlineMath math="\text{csch } y = x" />。即 <InlineMath math="\sinh y = \frac{1}{x}" />。兩邊微分：</p>
