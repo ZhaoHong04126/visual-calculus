@@ -5,6 +5,7 @@ import DifferentiationRules from './DifferentiationRules';
 import ChainRule from './ChainRule';
 import HigherOrderDerivatives from './HigherOrderDerivatives';
 import InverseDerivatives from './InverseDerivatives';
+import HyperbolicDerivatives from './HyperbolicDerivatives';
 import '../Limits/Limits.css'; 
 
 import SectionNav from '../components/SectionNav';
@@ -16,6 +17,7 @@ export default function Derivatives() {
     { id: 'chain', title: '鏈鎖律' },
     { id: 'higher', title: '高階導數' },
     { id: 'inverse-diff', title: '反函數微分' },
+    { id: 'hyperbolic', title: '雙曲函數' },
   ];
 
   return (
@@ -34,6 +36,7 @@ export default function Derivatives() {
       <div id="chain"><ChainRule /></div>
       <div id="higher"><HigherOrderDerivatives /></div>
       <div id="inverse-diff"><InverseDerivatives /></div>
+      <div id="hyperbolic"><HyperbolicDerivatives /></div>
       
     </div>
   );
