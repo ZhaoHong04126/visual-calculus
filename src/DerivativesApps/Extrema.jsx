@@ -82,7 +82,7 @@ export default function Extrema() {
           這是一個保證極值存在的重要定理。
         </p>
         <div className="p-5 bg-white rounded border-2 border-black">
-          <p className="font-bold text-slate-700 mb-2">定理內容 (Theorem 26)：</p>
+          <p className="font-bold text-slate-700 mb-2">定理內容：</p>
           <p className="text-gray-700 leading-relaxed">
             若函數 <InlineMath math="f" /> 在<strong>有限閉區間 <InlineMath math="[a, b]" /></strong> 上<strong>連續</strong>，則：
           </p>

@@ -5,7 +5,7 @@ import { InlineMath, BlockMath } from '../components/Math';
 export default function Optimization() {
   return (
     <section className="subsection mt-8">
-      <h2 className="section-title text-2xl font-bold mb-4 border-b-2 border-teal-500 pb-2">5. 最佳化問題 (Optimization Problems)</h2>
+      <h2 className="section-title text-2xl font-bold mb-4 border-b-2 border-teal-500 pb-2">6. 最佳化問題 (Optimization Problems)</h2>
       
       <p className="mb-4 text-gray-700">
         最佳化是微分最廣泛的應用之一。無論是追求利潤極大化、成本極小化，還是尋找物理路徑的最短時間。
@@ -13,7 +13,7 @@ export default function Optimization() {
 
       {/* 解題步驟 */}
       <div className="math-box mb-6 p-6 bg-teal-50 rounded-lg shadow-sm border border-teal-100">
-        <h3 className="text-xl font-bold mb-3 text-teal-800">5.1 一般解題步驟</h3>
+        <h3 className="text-xl font-bold mb-3 text-teal-800">6.1 一般解題步驟</h3>
         <ol className="list-decimal ml-6 space-y-3 text-gray-700">
           <li><strong>理解問題：</strong> 標記已知條件，找出需要求極值的目標變數。</li>
           <li><strong>建立模型：</strong> 寫出目標函數與約束條件。</li>
