@@ -15,7 +15,6 @@ import IntegralsApps from './IntegralsApps/IntegralsApps';
 import Formulas from './Formulas/Formulas';
 
 
-// ChatGPT 風格側邊欄圖示（兩欄面板）
 function SidebarIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
