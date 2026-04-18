@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
 
@@ -43,6 +43,18 @@ function LogoIcon() {
 export default function App() {
   // 控制側邊欄開關的狀態，預設為開啟 (桌面版)，手機版預設為隱藏
   const [isSidebarOpen, setIsSidebarOpen] = useState(() => window.innerWidth > 768);
+
+  // 監聽視窗大小變化，解決從手機版切換回桌面版時側邊欄消失的問題
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsSidebarOpen(true);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // 切換側邊欄的函數
   const toggleSidebar = () => {
