@@ -2,7 +2,7 @@
   "name": "微積分視覺化筆記",
   "short_name": "微積分筆記",
   "description": "結合嚴謹邏輯與動態視覺化的微積分互動手冊",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3b82f6",
