@@ -24,6 +24,22 @@ function SidebarIcon() {
   );
 }
 
+// 網站識別標誌 (Sigma 圖案)
+function LogoIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" style={{ marginRight: '10px', borderRadius: '6px', flexShrink: 0 }}>
+      <defs>
+        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#3b82f6', stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: '#2563eb', stopOpacity: 1 }} />
+        </linearGradient>
+      </defs>
+      <rect width="512" height="512" rx="128" fill="url(#logoGrad)" />
+      <path d="M160 120 L352 120 L192 256 L352 392 L160 392" fill="none" stroke="white" strokeWidth="48" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function App() {
   // 控制側邊欄開關的狀態，預設為開啟 (桌面版)，手機版預設為隱藏
   const [isSidebarOpen, setIsSidebarOpen] = useState(() => window.innerWidth > 768);
@@ -55,6 +71,7 @@ export default function App() {
       {/* 左側導覽列：透過動態 class 控制展開或隱藏 */}
       <nav className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
+          <LogoIcon />
           <h2 className="sidebar-title">微積分參考手冊</h2>
           {/* 手機版關閉按鈕 - 側邊欄右上角 */}
           <button className="sidebar-toggle-btn" onClick={toggleSidebar} title="隱藏選單" aria-label="隱藏選單">
