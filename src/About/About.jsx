@@ -82,7 +82,34 @@ const About = () => {
       </section>
 
       <footer className="about-footer">
-        <p>Made with ❤️ for Calculus Learners.</p>
+        <div className="footer-main-layout">
+          <div className="footer-logo-side">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40">
+              <defs>
+                <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#3b82f6', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#2563eb', stopOpacity: 1 }} />
+                </linearGradient>
+              </defs>
+              <rect width="512" height="512" rx="128" fill="url(#footerLogoGrad)" />
+              <path d="M160 120 L352 120 L192 256 L352 392 L160 392" fill="none" stroke="white" strokeWidth="48" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+          <div className="footer-info-side">
+            <div className="footer-contact-row">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+              <span>Gmail：<a href="mailto:huaug9672@gmail.com">huaug9672@gmail.com</a></span>
+            </div>
+            <div className="footer-contact-row">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3.5 1.5a10.8 10.8 0 0 0-6 0C7 2 6 2 6 2c-.28 1.15-.28 2.35 0 3.5a4.6 4.6 0 0 0-1 3.5c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg>
+              <span>GitHub：<a href="https://github.com/ZhaoHong04126" target="_blank" rel="noopener noreferrer">ZhaoHong04126</a></span>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom-brand">
+          <p className="footer-credit">Made with ❤️ for Calculus Learners.</p>
+        </div>
       </footer>
     </div>
   );
