@@ -1,5 +1,6 @@
 // src/Functions/ExpLogFunctions.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { InlineMath, BlockMath } from '../components/Math';
 import FunctionGraph from '../components/FunctionGraph';
 
@@ -68,12 +69,13 @@ export default function ExpLogFunctions() {
           <li><strong>無理數：</strong>利用極限逼近。例如 <InlineMath math="x = \sqrt{3}" />，我們用數列 <InlineMath math="1.7, 1.73, 1.732 \dots" /> 去逼近它。保證圖形不發生斷點。</li>
         </ul>
 
-        <strong>💡 指數運算法則 (Laws of Exponents)</strong>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1rem', marginTop: '0.5rem', textAlign: 'center', backgroundColor: '#dcfce7', padding: '1rem', borderRadius: '0.5rem', fontSize: '0.875rem' }}>
-          <div><BlockMath math="a^x \cdot a^y = a^{x+y}" /></div>
-          <div><BlockMath math="\frac{a^x}{a^y} = a^{x-y}" /></div>
-          <div><BlockMath math="(a^x)^y = a^{xy}" /></div>
-          <div><BlockMath math="(ab)^x = a^x b^x" /></div>
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mt-6">
+          <p className="text-blue-700 text-sm flex items-center">
+            <span className="mr-2">💡</span>
+            <span>詳細的<strong>指數運算法則</strong>已整理至
+              <Link to="/basic-formulas" className="ml-1 underline font-bold hover:text-blue-900">第二章：基本公式</Link>。
+            </span>
+          </p>
         </div>
       </div>
 
@@ -137,13 +139,13 @@ export default function ExpLogFunctions() {
           </div>
         </div>
 
-        <strong className="block mt-4 mb-2">💡 對數運算法則 (Laws of Logarithms)</strong>
-        <p className="text-sm text-gray-600 mb-4">利用指數法則，我們可以推導出對應的對數法則：</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '0.5rem', backgroundColor: '#cffafe', padding: '1rem', borderRadius: '0.5rem', fontSize: '0.875rem' }}>
-          <div><strong style={{ display: 'block', marginBottom: '0.25rem', color: '#155e75', textAlign: 'center' }}>乘法變加法</strong><BlockMath math="\log_a(xy) = \log_a x + \log_a y" /></div>
-          <div><strong style={{ display: 'block', marginBottom: '0.25rem', color: '#155e75', textAlign: 'center' }}>除法變減法</strong><BlockMath math="\log_a\left(\frac{x}{y}\right) = \log_a x - \log_a y" /></div>
-          <div><strong style={{ display: 'block', marginBottom: '0.25rem', color: '#155e75', textAlign: 'center' }}>次方提前</strong><BlockMath math="\log_a(x^r) = r \log_a x" /></div>
-          <div><strong style={{ display: 'block', marginBottom: '0.25rem', color: '#155e75', textAlign: 'center' }}>換底公式</strong><BlockMath math="\log_a x = \frac{\ln x}{\ln a}" /></div>
+        <div className="bg-cyan-50 border-l-4 border-cyan-400 p-4 mt-6">
+          <p className="text-cyan-700 text-sm flex items-center">
+            <span className="mr-2">💡</span>
+            <span>詳細的<strong>對數運算法則</strong>已整理至
+              <Link to="/basic-formulas" className="ml-1 underline font-bold hover:text-cyan-900">第二章：基本公式</Link>。
+            </span>
+          </p>
         </div>
       </div>
 

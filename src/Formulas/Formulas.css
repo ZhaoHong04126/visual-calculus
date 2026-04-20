@@ -1,0 +1,125 @@
+/* src/Formulas/Formulas.css */
+
+.formula-table {
+  width: auto;
+  min-width: 550px;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: transparent;
+  border: none;
+}
+
+.formula-container {
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden; /* 防止出現上下捲動條 */
+  -webkit-overflow-scrolling: touch; 
+  margin-bottom: 2rem;
+  /* 隱藏捲動條但保留功能 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.formula-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.formula-container.full-width {
+  width: 100%;
+}
+
+.formula-table th, 
+.formula-table td {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  overflow: hidden; /* 防止內容撐開產生微小捲動條 */
+}
+
+.formula-table thead th {
+  background-color: transparent;
+  font-weight: 700;
+  color: #334155;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: normal;
+  text-align: center;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.formula-table tbody tr:hover {
+  background-color: transparent;
+}
+
+.formula-table td:first-child {
+  background-color: transparent;
+  font-weight: 600;
+  color: #1e293b;
+  width: auto;
+  min-width: 120px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.formula-table .math-cell {
+  font-size: 1.1rem;
+  line-height: normal;
+  padding-right: 2rem;
+}
+
+/* 強致 KaTeX 顯示模式靠左 */
+.formula-table .katex-display {
+  text-align: left !important;
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.formula-table .katex-display > .katex {
+  text-align: left !important;
+  white-space: normal !important;
+}
+
+/* 用於緊湊並排的表格樣式 */
+.compact-formula-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1000px; /* 限制格點總寬度 */
+}
+
+.compact-formula-grid .formula-container {
+  width: fit-content !important;
+  max-width: 100%;
+}
+
+.compact-formula-grid .formula-table {
+  margin: 0.75rem 0;
+  min-width: 0 !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  display: table !important; /* 強制以表格模式顯示，防止填滿 */
+}
+
+/* 針對並排表格縮減間距，避免「空太多」 */
+.compact-formula-grid .formula-table td,
+.compact-formula-grid .formula-table th {
+  padding: 8px 12px;
+}
+
+.compact-formula-grid .formula-table td:first-child {
+  width: 25%; /* 在並排小表中，標籤佔比稍微調高回 25% */
+}
+
+.compact-formula-grid .formula-table .math-cell {
+  padding-left: 1rem; /* 縮減公式左邊距 */
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .compact-formula-grid {
+    grid-template-columns: 1fr;
+  }
+}

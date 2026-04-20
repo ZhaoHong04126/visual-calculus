@@ -57,14 +57,14 @@ const About = () => {
           <div className="guide-card">
             <div className="guide-number">1</div>
             <div className="guide-text">
-              <h4>基礎章節（1-3章）</h4>
-              <p>建立函數、極限與連續性的嚴格基礎，這是通往導與積的門票。</p>
+              <h4>基礎章節（1-4章）</h4>
+              <p>建立函數、基本公式、極限與連續性的嚴格基礎，這是通往導與積的門票。</p>
             </div>
           </div>
           <div className="guide-card">
             <div className="guide-number">2</div>
             <div className="guide-text">
-              <h4>核心應用（4-8章）</h4>
+              <h4>核心應用（5-9章）</h4>
               <p>深入探討微分與積分的層層應用，並提供精簡的公式整理，解決現代科學的核心問題。</p>
             </div>
           </div>

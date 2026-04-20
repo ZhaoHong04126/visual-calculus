@@ -23,7 +23,7 @@ export default function Derivatives() {
   return (
     <div className="topic-content">
       <header className="topic-header">
-        <h1 className="topic-title">第四章：導數與微分</h1>
+        <h1 className="topic-title">第五章：導數與微分</h1>
         <p className="text-lg mt-2 text-gray-600">
           從割線到切線，從平均變化到瞬間變化，見證微積分最迷人的魔法。
         </p>

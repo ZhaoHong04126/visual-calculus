@@ -13,6 +13,7 @@ import DerivativesApps from './DerivativesApps/DerivativesApps';
 import Integrals from './Integrals/Integrals';
 import IntegralsApps from './IntegralsApps/IntegralsApps';
 import Formulas from './Formulas/Formulas';
+import BasicFormulas from './BasicFormulas/BasicFormulas';
 
 
 function SidebarIcon() {
@@ -107,38 +108,43 @@ export default function App() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/basic-formulas" className={({ isActive }) => isActive ? "active-link" : ""}>
+              第二章：基本公式
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/limits" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第二章：極限
+              第三章：極限
             </NavLink>
           </li>
           <li>
             <NavLink to="/continuity" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第三章：連續
+              第四章：連續
             </NavLink>
           </li>
           <li>
             <NavLink to="/derivatives" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第四章：導數與微分
+              第五章：導數與微分
             </NavLink>
           </li>
           <li>
             <NavLink to="/derivatives-apps" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第五章：微分的應用
+              第六章：微分的應用
             </NavLink>
           </li>
           <li>
             <NavLink to="/integrals" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第六章：反導數與積分
+              第七章：反導數與積分
             </NavLink>
           </li>
           <li>
             <NavLink to="/integrals-apps" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第七章：積分的應用
+              第八章：積分的應用
             </NavLink>
           </li>
           <li>
             <NavLink to="/formulas" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第八章：公式整理
+              第九章：公式整理
             </NavLink>
           </li>
         </ul>
@@ -151,6 +157,7 @@ export default function App() {
             <Route path="/" element={<About />} />
             <Route path="/introduction" element={<Introduction />} />
             <Route path="/functions" element={<Functions />} />
+            <Route path="/basic-formulas" element={<BasicFormulas />} />
             <Route path="/limits" element={<Limits />} />
             <Route path="/continuity" element={<Continuity />} />
             <Route path="/derivatives" element={<Derivatives />} />
