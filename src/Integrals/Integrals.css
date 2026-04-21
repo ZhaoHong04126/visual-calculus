@@ -1,0 +1,88 @@
+/* src/Integrals/Integrals.css */
+
+.topic-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.topic-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.025em;
+}
+
+.subsection {
+  margin-bottom: 4rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  color: #334155;
+  margin-bottom: 1.5rem;
+}
+
+/* 數學定義與定理區塊 */
+.math-box {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.math-box:hover {
+  transform: translateY(-2px);
+}
+
+.theorem-box {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 5px solid #f59e0b;
+  line-height: 1.6;
+}
+
+.example-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* 表格專用樣式 - 增加框線 */
+.integral-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #cbd5e1; /* 外框線 */
+  background-color: #ffffff;
+}
+
+.integral-table th, 
+.integral-table td {
+  border: 1px solid #cbd5e1; /* 內網格線 */
+  padding: 12px 16px;
+}
+
+.integral-table th {
+  background-color: #4f46e5;
+  color: white;
+  font-weight: bold;
+}
+
+/* 動畫 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 針對 Coming Soon 的透明度微調 */
+.opacity-50 {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.opacity-50:hover {
+  opacity: 0.8;
+}
