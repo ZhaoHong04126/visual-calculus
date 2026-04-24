@@ -63,11 +63,16 @@
 *   定積分的黎曼和與幾何解釋。
 *   微積分基本定理 (FTC)。
 
-### **第八章：積分的應用 (Applications of Integrals)**
+### **第八章：積分技巧 (Integration Techniques)**
+*   變數變換法（u-Substitution）：鏈鎖律的逆運算。
+*   分部積分法（Integration by Parts）：乘積法則的逆運算。
+*   三角變換法（Trigonometric Substitution）（開發中）。
+
+### **第九章：積分的應用 (Applications of Integrals)**
 *   平面區域面積與旋轉體體積。
 *   弧長與旋轉曲面積。
 
-### **第九章：公式整理 (Formulas)**
+### **第十章：公式整理 (Formulas)**
 *   全課程公式匯整與最後複習表。
 
 ---
@@ -113,13 +118,15 @@ src/
 ├── components/         # 全域元件 (Math 渲染器, 導覽列, 404 頁)
 ├── Introduction/       # 第零章：簡介與地圖
 ├── Functions/          # 第一章：各類基礎函數
-├── Limits/             # 第二章：極限論
-├── Continuity/         # 第三章：連續性理論
-├── Derivatives/        # 第四章：導數與微分學
-├── DerivativesApps/    # 第五章：微分的應用
-├── Integrals/          # 第六章：反導數與積分
-├── IntegralsApps/      # 第七章：積分的應用
-├── Formulas/           # 第八章：公式整理
+├── BasicFormulas/      # 第二章：基本公式
+├── Limits/             # 第三章：極限論
+├── Continuity/         # 第四章：連續性理論
+├── Derivatives/        # 第五章：導數與微分學
+├── DerivativesApps/    # 第六章：微分的應用
+├── Integrals/          # 第七章：反導數與積分
+├── Techniques/         # 第八章：積分技巧
+├── IntegralsApps/      # 第九章：積分的應用
+├── Formulas/           # 第十章：公式整理
 └── App.jsx             # 路由分發與主框架
 ```
 

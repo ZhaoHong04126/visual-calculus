@@ -1,11 +1,8 @@
 // src/Integrals/Integrals.jsx
 import Antiderivatives from './Antiderivatives';
-import USubstitution from './USubstitution';
-import IntegrationByParts from './IntegrationByParts';
 import DefiniteIntegrals from './DefiniteIntegrals';
 import FundamentalTheorem from './FundamentalTheorem';
 import SectionNav from '../components/SectionNav';
-import ComingSoon from '../components/ComingSoon';
 import './Integrals.css';
 
 export default function Integrals() {
@@ -13,7 +10,6 @@ export default function Integrals() {
     { id: 'definite', title: '黎曼和與定積分' },
     { id: 'antiderivatives', title: '反導數與不定積分' },
     { id: 'ftc', title: '微積分基本定理' },
-    { id: 'techniques', title: '積分技巧' },
   ];
 
   return (
@@ -32,22 +28,6 @@ export default function Integrals() {
       <div id="antiderivatives"><Antiderivatives /></div>
 
       <div id="ftc"><FundamentalTheorem /></div>
-
-      <div id="techniques" className="mt-12 pt-8 border-t border-gray-100">
-        <h2 className="section-title text-2xl font-bold mb-4">4. 積分技巧</h2>
-      </div>
-
-      <div id="substitution">
-        <USubstitution />
-      </div>
-
-      <div id="parts">
-        <IntegrationByParts />
-      </div>
-
-      <div id="trig-sub" className="mt-8 pt-4 ml-6 border-t border-gray-50">
-        <h3 className="section-subtitle text-xl font-bold mb-4 opacity-50">4.3 三角變換法 (Coming Soon)</h3>
-      </div>
     </div>
   );
 }

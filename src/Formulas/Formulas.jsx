@@ -15,7 +15,7 @@ export default function Formulas() {
   return (
     <div className="topic-content">
       <header className="topic-header">
-        <h1 className="topic-title">第九章：公式整理</h1>
+        <h1 className="topic-title">第十章：公式整理</h1>
         <p className="text-lg mt-2 text-gray-600">
           針對微積分核心公式進行系統性整理，包含極限法則、連續性判定與重要生存定理。
         </p>

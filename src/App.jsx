@@ -11,6 +11,7 @@ import Continuity from './Continuity/Continuity';
 import Derivatives from './Derivatives/Derivatives';
 import DerivativesApps from './DerivativesApps/DerivativesApps';
 import Integrals from './Integrals/Integrals';
+import Techniques from './Techniques/Techniques';
 import IntegralsApps from './IntegralsApps/IntegralsApps';
 import Formulas from './Formulas/Formulas';
 import BasicFormulas from './BasicFormulas/BasicFormulas';
@@ -138,13 +139,18 @@ export default function App() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/techniques" className={({ isActive }) => isActive ? "active-link" : ""}>
+              第八章：積分技巧
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/integrals-apps" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第八章：積分的應用
+              第九章：積分的應用
             </NavLink>
           </li>
           <li>
             <NavLink to="/formulas" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第九章：公式整理
+              第十章：公式整理
             </NavLink>
           </li>
         </ul>
@@ -163,6 +169,7 @@ export default function App() {
             <Route path="/derivatives" element={<Derivatives />} />
             <Route path="/derivatives-apps" element={<DerivativesApps />} />
             <Route path="/integrals" element={<Integrals />} />
+            <Route path="/techniques" element={<Techniques />} />
             <Route path="/integrals-apps" element={<IntegralsApps />} />
             <Route path="/formulas" element={<Formulas />} />
 
