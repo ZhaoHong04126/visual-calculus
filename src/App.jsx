@@ -13,7 +13,6 @@ import DerivativesApps from './DerivativesApps/DerivativesApps';
 import Integrals from './Integrals/Integrals';
 import Techniques from './Techniques/Techniques';
 import IntegralsApps from './IntegralsApps/IntegralsApps';
-import Formulas from './Formulas/Formulas';
 import BasicFormulas from './BasicFormulas/BasicFormulas';
 
 
@@ -148,11 +147,6 @@ export default function App() {
               第九章：積分的應用
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/formulas" className={({ isActive }) => isActive ? "active-link" : ""}>
-              第十章：公式整理
-            </NavLink>
-          </li>
         </ul>
       </nav>
 
@@ -171,7 +165,6 @@ export default function App() {
             <Route path="/integrals" element={<Integrals />} />
             <Route path="/techniques" element={<Techniques />} />
             <Route path="/integrals-apps" element={<IntegralsApps />} />
-            <Route path="/formulas" element={<Formulas />} />
 
           </Routes>
         </div>

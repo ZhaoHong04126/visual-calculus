@@ -1,8 +1,8 @@
 import React from 'react';
 import SectionNav from '../components/SectionNav';
-import AlgebraTrigFormulas from '../Formulas/AlgebraTrigFormulas';
+import AlgebraTrigFormulas from './AlgebraTrigFormulas';
 import { InlineMath, BlockMath } from '../components/Math';
-import '../Formulas/Formulas.css';
+import './Formulas.css';
 
 export default function BasicFormulas() {
   const sections = [
