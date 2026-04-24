@@ -1,6 +1,7 @@
 // src/Integrals/Integrals.jsx
 import Antiderivatives from './Antiderivatives';
 import USubstitution from './USubstitution';
+import IntegrationByParts from './IntegrationByParts';
 import DefiniteIntegrals from './DefiniteIntegrals';
 import FundamentalTheorem from './FundamentalTheorem';
 import SectionNav from '../components/SectionNav';
@@ -40,8 +41,8 @@ export default function Integrals() {
         <USubstitution />
       </div>
 
-      <div id="parts" className="mt-8 pt-4 ml-6 border-t border-gray-50">
-        <h3 className="section-subtitle text-xl font-bold mb-4 opacity-50">4.2 分部積分 ( IBP ) (Coming Soon)</h3>
+      <div id="parts">
+        <IntegrationByParts />
       </div>
 
       <div id="trig-sub" className="mt-8 pt-4 ml-6 border-t border-gray-50">
