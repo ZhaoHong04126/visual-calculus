@@ -1,4 +1,4 @@
-const CACHE_NAME = 'calculus-v3';
+const CACHE_NAME = 'calculus-v4';
 const ASSETS = [
   './',
   './index.html',
@@ -6,8 +6,14 @@ const ASSETS = [
   './manifest.json'
 ];
 
+// 這些資源應該使用 Network-First 策略，確保使用者總是拿到最新的 index.html
+const NETWORK_FIRST_ASSETS = [
+  '/',
+  '/index.html',
+  '/sw.js'
+];
+
 self.addEventListener('install', (event) => {
-  // 強制更新 Service Worker，不要等待舊的 SW 關閉
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -17,9 +23,7 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-  // 啟動後立即接管所有頁面
   event.waitUntil(clients.claim());
-  // 清理舊版本的快取
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
@@ -34,10 +38,31 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  const url = new URL(event.request.url);
+  
+  // 針對 HTML 頁面使用 Network-First 策略
+  if (event.request.mode === 'navigate' || NETWORK_FIRST_ASSETS.some(path => url.pathname.endsWith(path))) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          const clonedResponse = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, clonedResponse);
+          });
+          return response;
+        })
+        .catch(() => {
+          return caches.match(event.request);
+        })
+    );
+    return;
+  }
+
+  // 其他資源使用 Cache-First 策略
   event.respondWith(
     caches.match(event.request).then((response) => {
-      // 優先返回快取，若無快取則發起網路請求
       return response || fetch(event.request);
     })
   );
 });
+
