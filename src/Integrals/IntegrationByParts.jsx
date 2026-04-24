@@ -41,7 +41,7 @@ export default function IntegrationByParts() {
   return (
     <section className="subsection mt-12 pt-8 border-t border-gray-100">
       <h2 className="section-title text-2xl font-bold mb-4 border-b-2 border-rose-500 pb-2">
-        4.2 分部積分 (Integration by Parts, IBP)
+        2. 分部積分 (Integration by Parts, IBP)
       </h2>
 
       <p className="mb-6 text-gray-700 leading-relaxed">
@@ -53,7 +53,7 @@ export default function IntegrationByParts() {
       {/* 4.2.1 公式推導與定理 */}
       <div className="math-box mb-6 p-6 bg-rose-50 rounded-lg shadow-sm border border-rose-100">
         <h3 className="text-xl font-bold mb-3 text-rose-800">
-          4.2.1 公式推導
+          2.1 公式推導
         </h3>
 
         <div className="mb-4 p-4 bg-white/80 rounded-lg border-l-4 border-rose-500 shadow-sm">
@@ -97,7 +97,7 @@ export default function IntegrationByParts() {
       {/* 4.2.2 函數分類與選取原則 */}
       <div className="math-box mb-6 p-6 bg-slate-50 rounded-lg shadow-sm border border-slate-200 mt-8">
         <h3 className="text-xl font-bold mb-2 text-slate-800">
-          4.2.2 如何選取 <InlineMath math="f" /> 與 <InlineMath math="g'" />：三類函數原則
+          2.2 如何選取 <InlineMath math="f" /> 與 <InlineMath math="g'" />：三類函數原則
         </h3>
         <p className="text-sm text-gray-600 mb-5">
           分部積分的關鍵在於：<strong>哪個函數留著當 <InlineMath math="f" />（被微分），哪個移到後面當 <InlineMath math="g'" />（被積分）</strong>。
@@ -168,7 +168,7 @@ export default function IntegrationByParts() {
       {/* 4.2.3 範例 */}
       <div className="example-box mt-8 border-t-4 border-rose-500 shadow-md">
         <h3 className="example-title text-xl font-bold text-rose-900 mb-6 flex items-center">
-          <span className="mr-2">📝</span> 4.2.3 範例練習
+          <span className="mr-2">📝</span> 2.3 範例練習
         </h3>
 
         <div className="space-y-8">
@@ -298,7 +298,7 @@ export default function IntegrationByParts() {
       {/* 4.2.4 表格法（Tabular Method） */}
       <div className="math-box mt-8 p-6 bg-amber-50 rounded-lg shadow-sm border border-amber-100">
         <h3 className="text-xl font-bold mb-3 text-amber-800">
-          4.2.4 表格法 (Tabular Method)
+          2.4 表格法 (Tabular Method)
         </h3>
         <p className="text-sm text-gray-700 mb-1">
           當 <InlineMath math="f(x)" /> 為<strong>多項式</strong>，需要多次重複分部積分時，
@@ -416,7 +416,7 @@ export default function IntegrationByParts() {
       {/* 4.2.5 常見錯誤 */}
       <div className="mt-8 p-5 bg-red-50 rounded-lg border border-red-200">
         <h3 className="text-lg font-bold text-red-800 mb-3 flex items-center">
-          <span className="mr-2">⚠️</span> 4.2.5 常見錯誤
+          <span className="mr-2">⚠️</span> 2.5 常見錯誤
         </h3>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-3">

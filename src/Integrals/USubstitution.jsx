@@ -24,7 +24,7 @@ export default function USubstitution() {
   return (
     <section className="subsection mt-12 pt-8 border-t border-gray-100">
       <h2 className="section-title text-2xl font-bold mb-4 border-b-2 border-violet-500 pb-2">
-        4.1 變數變換 (u-Substitution)
+        1. 變數變換 (u-Substitution)
       </h2>
 
       <p className="mb-6 text-gray-700 leading-relaxed">
@@ -36,7 +36,7 @@ export default function USubstitution() {
       {/* 4.1.1 定理 */}
       <div className="math-box mb-6 p-6 bg-violet-50 rounded-lg shadow-sm border border-violet-100">
         <h3 className="text-xl font-bold mb-3 text-violet-800">
-          4.1.1 定理：變數變換法
+          1.1 定理：變數變換法
         </h3>
 
         <div className="mb-4 p-4 bg-white/80 rounded-lg border-l-4 border-violet-500 shadow-sm">
@@ -68,7 +68,7 @@ export default function USubstitution() {
       {/* 4.1.2 操作步驟 */}
       <div className="math-box mb-6 p-6 bg-slate-50 rounded-lg shadow-sm border border-slate-200 mt-8">
         <h3 className="text-xl font-bold mb-4 text-slate-800">
-          4.1.2 操作步驟 (How To Use)
+          1.2 操作步驟 (How To Use)
         </h3>
         <ol className="space-y-4">
           <li className="flex gap-4 items-start">
@@ -124,7 +124,7 @@ export default function USubstitution() {
       {/* 4.1.3 範例 */}
       <div className="example-box mt-8 border-t-4 border-violet-500 shadow-md">
         <h3 className="example-title text-xl font-bold text-violet-900 mb-6 flex items-center">
-          <span className="mr-2">📝</span> 4.1.3 範例練習
+          <span className="mr-2">📝</span> 1.3 範例練習
         </h3>
 
         <div className="space-y-8">
@@ -214,7 +214,7 @@ export default function USubstitution() {
       {/* 4.1.4 常見錯誤 */}
       <div className="mt-8 p-5 bg-red-50 rounded-lg border border-red-200">
         <h3 className="text-lg font-bold text-red-800 mb-3 flex items-center">
-          <span className="mr-2">⚠️</span> 4.1.4 常見錯誤
+          <span className="mr-2">⚠️</span> 1.4 常見錯誤
         </h3>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-3">
@@ -243,7 +243,7 @@ export default function USubstitution() {
 
       {/* 4.1.5 換元選擇技巧小結 */}
       <div className="mt-8 p-5 bg-violet-100/40 rounded-lg border border-violet-200">
-        <h3 className="text-lg font-bold text-violet-900 mb-3">💡 換元選擇技巧小結</h3>
+        <h3 className="text-lg font-bold text-violet-900 mb-3">💡 1.5 換元選擇技巧小結</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
           <div className="p-3 bg-white rounded border border-violet-100">
             <p className="font-semibold text-violet-800 mb-1">適合換元的型態</p>
