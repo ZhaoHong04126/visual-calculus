@@ -1,5 +1,6 @@
 // src/Integrals/Integrals.jsx
 import Antiderivatives from './Antiderivatives';
+import USubstitution from './USubstitution';
 import DefiniteIntegrals from './DefiniteIntegrals';
 import FundamentalTheorem from './FundamentalTheorem';
 import SectionNav from '../components/SectionNav';
@@ -38,8 +39,8 @@ export default function Integrals() {
         <h2 className="section-title text-2xl font-bold mb-4">4. 積分技巧</h2>
       </div>
 
-      <div id="substitution" className="mt-8 pt-4 ml-6 border-t border-gray-50">
-        <h3 className="section-subtitle text-xl font-bold mb-4 opacity-50">4.1 變數變換 (Coming Soon)</h3>
+      <div id="substitution">
+        <USubstitution />
       </div>
 
       <div id="parts" className="mt-8 pt-4 ml-6 border-t border-gray-50">
