@@ -11,8 +11,10 @@ export default function Integrals() {
     { id: 'definite', title: '黎曼和與定積分' },
     { id: 'antiderivatives', title: '反導數與不定積分' },
     { id: 'ftc', title: '微積分基本定理' },
-    { id: 'substitution', title: '代換積分法' },
-    { id: 'parts', title: '分部積分法' },
+    { id: 'techniques', title: '積分技巧' },
+    { id: 'substitution', title: '4.1 變數變換' },
+    { id: 'parts', title: '4.2 分部積分 ( IBP )' },
+    { id: 'trig-sub', title: '4.3 三角變換法' },
   ];
 
   return (
@@ -32,12 +34,20 @@ export default function Integrals() {
 
       <div id="ftc"><FundamentalTheorem /></div>
 
-      <div id="substitution" className="mt-12 pt-8 border-t border-gray-100">
-        <h2 className="section-title text-2xl font-bold mb-4 opacity-50">4. 代換積分法 (Coming Soon)</h2>
+      <div id="techniques" className="mt-12 pt-8 border-t border-gray-100">
+        <h2 className="section-title text-2xl font-bold mb-4">4. 積分技巧</h2>
       </div>
 
-      <div id="parts" className="mt-12 pt-8 border-t border-gray-100">
-        <h2 className="section-title text-2xl font-bold mb-4 opacity-50">5. 分部積分法 (Coming Soon)</h2>
+      <div id="substitution" className="mt-8 pt-4 ml-6 border-t border-gray-50">
+        <h3 className="section-subtitle text-xl font-bold mb-4 opacity-50">4.1 變數變換 (Coming Soon)</h3>
+      </div>
+
+      <div id="parts" className="mt-8 pt-4 ml-6 border-t border-gray-50">
+        <h3 className="section-subtitle text-xl font-bold mb-4 opacity-50">4.2 分部積分 ( IBP ) (Coming Soon)</h3>
+      </div>
+
+      <div id="trig-sub" className="mt-8 pt-4 ml-6 border-t border-gray-50">
+        <h3 className="section-subtitle text-xl font-bold mb-4 opacity-50">4.3 三角變換法 (Coming Soon)</h3>
       </div>
     </div>
   );
