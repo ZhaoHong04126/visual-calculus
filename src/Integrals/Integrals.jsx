@@ -13,9 +13,6 @@ export default function Integrals() {
     { id: 'antiderivatives', title: '反導數與不定積分' },
     { id: 'ftc', title: '微積分基本定理' },
     { id: 'techniques', title: '積分技巧' },
-    { id: 'substitution', title: '4.1 變數變換' },
-    { id: 'parts', title: '4.2 分部積分 ( IBP )' },
-    { id: 'trig-sub', title: '4.3 三角變換法' },
   ];
 
   return (
