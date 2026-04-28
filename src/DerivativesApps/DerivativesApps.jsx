@@ -24,7 +24,7 @@ export default function DerivativesApps() {
   return (
     <div className="topic-content">
       <header className="topic-header">
-        <h1 className="topic-title">第六章：微分的應用</h1>
+        <h1 className="topic-title">第五章：微分的應用</h1>
         <p className="text-lg mt-2 text-gray-600">
           探索微分在分析函數性狀、解極值與求逼近值中的核心應用。
         </p>

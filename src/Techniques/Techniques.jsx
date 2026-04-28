@@ -15,7 +15,7 @@ export default function Techniques() {
   return (
     <div className="topic-content">
       <header className="topic-header">
-        <h1 className="topic-title">第八章：積分技巧</h1>
+        <h1 className="topic-title">第七章：積分技巧</h1>
         <p className="text-lg mt-2 text-gray-600">
           掌握變數變換、分部積分等核心技巧，化簡複雜積分求解。
         </p>

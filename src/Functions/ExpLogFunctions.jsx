@@ -69,14 +69,6 @@ export default function ExpLogFunctions() {
           <li><strong>無理數：</strong>利用極限逼近。例如 <InlineMath math="x = \sqrt{3}" />，我們用數列 <InlineMath math="1.7, 1.73, 1.732 \dots" /> 去逼近它。保證圖形不發生斷點。</li>
         </ul>
 
-        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mt-6">
-          <p className="text-blue-700 text-sm flex items-center">
-            <span className="mr-2">💡</span>
-            <span>詳細的<strong>指數運算法則</strong>已整理至
-              <Link to="/basic-formulas" className="ml-1 underline font-bold hover:text-blue-900">第二章：基本公式</Link>。
-            </span>
-          </p>
-        </div>
       </div>
 
       {/* ==========================================
@@ -139,14 +131,6 @@ export default function ExpLogFunctions() {
           </div>
         </div>
 
-        <div className="bg-cyan-50 border-l-4 border-cyan-400 p-4 mt-6">
-          <p className="text-cyan-700 text-sm flex items-center">
-            <span className="mr-2">💡</span>
-            <span>詳細的<strong>對數運算法則</strong>已整理至
-              <Link to="/basic-formulas" className="ml-1 underline font-bold hover:text-cyan-900">第二章：基本公式</Link>。
-            </span>
-          </p>
-        </div>
       </div>
 
       {/* ==========================================

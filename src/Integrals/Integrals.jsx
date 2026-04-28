@@ -15,7 +15,7 @@ export default function Integrals() {
   return (
     <div className="topic-content">
       <header className="topic-header">
-        <h1 className="topic-title">第七章：反導數與積分</h1>
+        <h1 className="topic-title">第六章：反導數與積分</h1>
         <p className="text-lg mt-2 text-gray-600">
           從面積的逼近到變化的還原，探索積分學的奧秘。
         </p>

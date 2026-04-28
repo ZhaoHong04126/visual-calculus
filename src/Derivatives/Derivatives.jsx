@@ -6,7 +6,7 @@ import ChainRule from './ChainRule';
 import HigherOrderDerivatives from './HigherOrderDerivatives';
 import InverseDerivatives from './InverseDerivatives';
 import HyperbolicDerivatives from './HyperbolicDerivatives';
-import '../Limits/Limits.css'; 
+import '../Limits/Limits.css';
 
 import SectionNav from '../components/SectionNav';
 
@@ -23,7 +23,7 @@ export default function Derivatives() {
   return (
     <div className="topic-content">
       <header className="topic-header">
-        <h1 className="topic-title">第五章：導數與微分</h1>
+        <h1 className="topic-title">第四章：導數與微分</h1>
         <p className="text-lg mt-2 text-gray-600">
           從割線到切線，從平均變化到瞬間變化，見證微積分最迷人的魔法。
         </p>
@@ -37,7 +37,7 @@ export default function Derivatives() {
       <div id="higher"><HigherOrderDerivatives /></div>
       <div id="inverse-diff"><InverseDerivatives /></div>
       <div id="hyperbolic"><HyperbolicDerivatives /></div>
-      
+
     </div>
   );
 }

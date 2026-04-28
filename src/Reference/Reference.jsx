@@ -1,0 +1,21 @@
+import React from 'react';
+import OperationsRules from './OperationsRules';
+import Theorems from './Theorems';
+import FormulaTable from './FormulaTable';
+import QuestionBank from './QuestionBank';
+
+export default function Reference() {
+  return (
+    <div className="chapter-content">
+      <h1 className="topic-title">第九章：公式表 / 題庫</h1>
+      <p className="topic-description mb-8 text-gray-700">
+        本章收錄微積分常用的公式表以及精選題庫，方便隨時複習與查閱。
+      </p>
+
+      <OperationsRules />
+      <Theorems />
+      <FormulaTable />
+      <QuestionBank />
+    </div>
+  );
+}
