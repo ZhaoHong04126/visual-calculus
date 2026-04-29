@@ -103,12 +103,15 @@ const About = () => {
       chapter: "第九章：公式表 / 題庫",
       path: "/reference",
       sections: [
-        { id: "operations", "title": "運算法則" },
-        { id: "theorems", "title": "重要定理" },
-        { id: "formulas", "title": "公式表" },
-        { id: "questions", "title": "題庫" }
+        { id: "operations", title: "運算法則" },
+        { id: "theorems", title: "重要定理" },
+        { id: "formulas", title: "三角公式表" },
+        { id: "basic-calculus", title: "基礎函數微積分公式" },
+        { id: "advanced-formulas", title: "進階公式" },
+        { id: "questions", title: "題庫" }
       ]
     }
+
   ];
 
   return (

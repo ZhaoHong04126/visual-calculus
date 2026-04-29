@@ -2,6 +2,8 @@ import React from 'react';
 import OperationsRules from './OperationsRules';
 import Theorems from './Theorems';
 import FormulaTable from './FormulaTable';
+import BasicCalculusFormulas from './BasicCalculusFormulas';
+import AdvancedFormulas from './AdvancedFormulas';
 import QuestionBank from './QuestionBank';
 
 export default function Reference() {
@@ -15,6 +17,8 @@ export default function Reference() {
       <div id="operations"><OperationsRules /></div>
       <div id="theorems"><Theorems /></div>
       <div id="formulas"><FormulaTable /></div>
+      <div id="basic-calculus"><BasicCalculusFormulas /></div>
+      <div id="advanced-formulas"><AdvancedFormulas /></div>
       <div id="questions"><QuestionBank /></div>
 
     </div>
