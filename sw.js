@@ -1,4 +1,4 @@
-const CACHE_NAME = 'calculus-v4';
+const CACHE_NAME = 'calculus-v7';
 const ASSETS = [
   './',
   './index.html',
@@ -39,7 +39,7 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
-  
+
   // 針對 HTML 頁面使用 Network-First 策略
   if (event.request.mode === 'navigate' || NETWORK_FIRST_ASSETS.some(path => url.pathname.endsWith(path))) {
     event.respondWith(
