@@ -120,25 +120,37 @@ const About = () => {
           <p className="toc-subtitle">一覽微積分核心架構，點擊快速前往各章節與核心單元。</p>
         </div>
 
-        <div className="toc-grid">
-          {tocData.map((chapter, idx) => (
-            <div key={idx} className="toc-card">
-              <Link to={chapter.path} className="toc-chapter-title">
-                {chapter.chapter}
-              </Link>
-              <ul className="toc-sections-list">
-                {chapter.sections.map((section, sIdx) => (
-                  <li key={sIdx}>
-                    <Link to={`${chapter.path}#${section.id}`} className="toc-section-link">
-                      <span className="toc-bullet"></span>
-                      {section.title}
+        <div className="toc-table-container">
+          <table className="toc-table">
+            <thead>
+              <tr>
+                <th className="toc-th-chapter">章節內容</th>
+                <th className="toc-th-sections">包含單元</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tocData.map((chapter, idx) => (
+                <tr key={idx}>
+                  <td className="toc-td-chapter">
+                    <Link to={chapter.path} className="toc-chapter-link">
+                      {chapter.chapter}
                     </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                  </td>
+                  <td className="toc-td-sections">
+                    <div className="toc-sections-chips">
+                      {chapter.sections.map((section, sIdx) => (
+                        <Link key={sIdx} to={`${chapter.path}#${section.id}`} className="toc-section-chip">
+                          {section.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
+
       </section>
 
       <section className="about-section">
