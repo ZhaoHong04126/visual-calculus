@@ -14,6 +14,8 @@ import Integrals from './Integrals/Integrals';
 import Techniques from './Techniques/Techniques';
 import IntegralsApps from './IntegralsApps/IntegralsApps';
 import Reference from './Reference/Reference';
+import ScrollToHashElement from './components/ScrollToHash';
+
 
 
 function SidebarIcon() {
@@ -64,6 +66,8 @@ export default function App() {
 
   return (
     <div className="app-container">
+      <ScrollToHashElement />
+
 
 
       {/* 手機版遮罩：點擊可關閉側邊欄 */}

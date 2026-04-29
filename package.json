@@ -2,7 +2,7 @@
   "name": "calculus-resources",
   "homepage": "https://zhaohong04126.github.io/visual-calculus",
   "private": true,
-  "version": "6.0.0",
+  "version": "7.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,73 +1,143 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './About.css';
 
 const About = () => {
+  const tocData = [
+    {
+      chapter: "第零章：微積分簡介",
+      path: "/introduction",
+      sections: [
+        { id: "what-is", title: "何謂微積分" },
+        { id: "map", title: "學習地圖" },
+      ]
+    },
+    {
+      chapter: "第一章：函數介紹",
+      path: "/functions",
+      sections: [
+        { id: "definition", title: "函數定義" },
+        { id: "power-poly", "title": "冪函數 & 多項式" },
+        { id: "trig", "title": "三角函數" },
+        { id: "exp-log", "title": "指數 & 對數" },
+        { id: "inverse", "title": "反函數" },
+        { id: "inverse-trig", "title": "反三角函數" },
+        { id: "hyperbolic", "title": "雙曲函數" },
+        { id: "inverse-hyperbolic", "title": "反雙曲函數" },
+      ]
+    },
+    {
+      chapter: "第二章：極限",
+      path: "/limits",
+      sections: [
+        { id: "definition", "title": "直觀定義" },
+        { id: "laws", "title": "運算法則" },
+        { id: "proof", "title": "嚴格證明" },
+        { id: "types", "title": "極限類型" },
+        { id: "infinity", "title": "無窮遠處" },
+        { id: "asymptotes", "title": "漸近線" },
+      ]
+    },
+    {
+      chapter: "第三章：連續",
+      path: "/continuity",
+      sections: [
+        { id: "basics", "title": "基本定義" },
+        { id: "props", "title": "連續性質" },
+        { id: "theorems", "title": "重要定理" },
+      ]
+    },
+    {
+      chapter: "第四章：導數與微分",
+      path: "/derivatives",
+      sections: [
+        { id: "def", "title": "導數定義" },
+        { id: "rules", "title": "微分公式" },
+        { id: "chain", "title": "鏈鎖律" },
+        { id: "higher", "title": "高階導數" },
+        { id: "inverse-diff", "title": "反函數微分" },
+        { id: "hyperbolic", "title": "雙曲函數" },
+      ]
+    },
+    {
+      chapter: "第五章：微分的應用",
+      path: "/derivatives-apps",
+      sections: [
+        { id: "mvt", "title": "均值定理" },
+        { id: "monotonicity", "title": "單調性" },
+        { id: "extrema", "title": "極值" },
+        { id: "concavity", "title": "凹凸性" },
+        { id: "lhopital", "title": "羅必達" },
+        { id: "optimization", "title": "最佳化" },
+        { id: "linear", "title": "線性逼近" },
+        { id: "newton", "title": "牛頓法" },
+      ]
+    },
+    {
+      chapter: "第六章：反導數與積分",
+      path: "/integrals",
+      sections: [
+        { id: "definite", "title": "黎曼和與定積分" },
+        { id: "antiderivatives", "title": "反導數與不定積分" },
+        { id: "ftc", "title": "微積分基本定理" },
+      ]
+    },
+    {
+      chapter: "第七章：積分技巧",
+      path: "/techniques",
+      sections: [
+        { id: "substitution", "title": "變數變換法" },
+        { id: "parts", "title": "分部積分法" },
+        { id: "trig-integrals", "title": "三角函數的積分" },
+        { id: "trig-sub", "title": "三角變換法" },
+      ]
+    },
+    {
+      chapter: "第八章：積分的應用",
+      path: "/integrals-apps",
+      sections: [
+        { id: "coming-soon", "title": "即將推出" }
+      ]
+    },
+    {
+      chapter: "第九章：公式表 / 題庫",
+      path: "/reference",
+      sections: [
+        { id: "operations", "title": "運算法則" },
+        { id: "theorems", "title": "重要定理" },
+        { id: "formulas", "title": "公式表" },
+        { id: "questions", "title": "題庫" }
+      ]
+    }
+  ];
+
   return (
     <div className="about-container">
-
-      <section className="about-section">
+      <section className="about-section toc-section">
         <div className="section-header">
-          <span className="section-tag">About</span>
-          <h2 className="section-title">網頁介紹與宗旨</h2>
+          <span className="section-tag">Directory</span>
+          <h2 className="section-title">📑 網站目錄總覽</h2>
+          <p className="toc-subtitle">一覽微積分核心架構，點擊快速前往各章節與核心單元。</p>
         </div>
-        <div className="content-card">
-          <p>
-            在微積分的學習過程中，許多抽象的概念（如極限的逼近、導數的變化率、積分的面積累積）往往難以單憑文字與靜態圖像理解。
-            本網頁致力於揚棄傳統講義的靜態限制，結合了嚴謹的數學邏輯（如 ε-δ 證明）與<b>動態幾何視覺化</b>，幫助學習者直觀地建立對微積分核心概念的深度理解。
-          </p>
-        </div>
-      </section>
 
-      <section className="about-features">
-        <h2 className="section-title center">✨ 專案亮點</h2>
-        <div className="features-grid">
-          <div className="feature-item">
-            <div className="feature-icon">🕹️</div>
-            <h3>互動式幾何探索</h3>
-            <p>動態展示反函數對稱性、極限逼近過程、漸近線行為以及夾擠定理，讓抽象代數瞬間具象化。</p>
-          </div>
-          <div className="feature-item">
-            <div className="feature-icon">📍</div>
-            <h3>智慧導覽體驗</h3>
-            <p>全域側邊欄與各章節頂部的「快速導覽列」，支援平滑捲動，讓您可以精準對位教學重點。</p>
-          </div>
-          <div className="feature-item">
-            <div className="feature-icon">🖋️</div>
-            <h3>教科書級公式渲染</h3>
-            <p>採用 KaTeX 渲染引擎，呈現優雅的 LaTeX 聖經級數學排版，完美呈現公式之美。</p>
-          </div>
-          <div className="feature-item">
-            <div className="feature-icon">📱</div>
-            <h3>頂級響應式設計</h3>
-            <p>無論是桌機還是手機，均能自動調整排版與圖表大小，隨時隨地同步學習。</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="about-section">
-        <h2 className="section-title">📚 如何開始？</h2>
-        <div className="start-guide">
-          <div className="guide-card">
-            <div className="guide-number">0</div>
-            <div className="guide-text">
-              <h4>第零章：微積分簡介</h4>
-              <p>從幾何本質出發，快速掌握微積分的發展與地圖。</p>
+        <div className="toc-grid">
+          {tocData.map((chapter, idx) => (
+            <div key={idx} className="toc-card">
+              <Link to={chapter.path} className="toc-chapter-title">
+                {chapter.chapter}
+              </Link>
+              <ul className="toc-sections-list">
+                {chapter.sections.map((section, sIdx) => (
+                  <li key={sIdx}>
+                    <Link to={`${chapter.path}#${section.id}`} className="toc-section-link">
+                      <span className="toc-bullet"></span>
+                      {section.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-          <div className="guide-card">
-            <div className="guide-number">1</div>
-            <div className="guide-text">
-              <h4>基礎章節（1-4章）</h4>
-              <p>建立函數、基本公式、極限與連續性的嚴格基礎，這是通往導與積的門票。</p>
-            </div>
-          </div>
-          <div className="guide-card">
-            <div className="guide-number">2</div>
-            <div className="guide-text">
-              <h4>核心應用（5-9章）</h4>
-              <p>深入探討微分與積分的層層應用，並提供精簡的公式整理，解決現代科學的核心問題。</p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -116,3 +186,4 @@ const About = () => {
 };
 
 export default About;
+

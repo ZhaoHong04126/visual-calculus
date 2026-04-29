@@ -12,10 +12,11 @@ export default function Reference() {
         本章收錄微積分常用的公式表以及精選題庫，方便隨時複習與查閱。
       </p>
 
-      <OperationsRules />
-      <Theorems />
-      <FormulaTable />
-      <QuestionBank />
+      <div id="operations"><OperationsRules /></div>
+      <div id="theorems"><Theorems /></div>
+      <div id="formulas"><FormulaTable /></div>
+      <div id="questions"><QuestionBank /></div>
+
     </div>
   );
 }
