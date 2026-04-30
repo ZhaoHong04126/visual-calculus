@@ -31,7 +31,7 @@ export default function AdvancedFormulas() {
                         <div>(2) <InlineMath math="\int \sin^2 x \,dx =  \frac{1}{2}x - \frac{1}{4}\sin 2x + C" /></div>
                         <div>(3) <InlineMath math="\int \sin^3 x \,dx = \frac{1}{3} \cos ^3 x \, -\cos x + C" /></div>
                         <div>(4) <InlineMath math="\int \sin^4 x \,dx = \frac{3}{8} x \, - \frac{1}{4} \sin 2x \, + \frac{1}{32} \sin 4x + C" /></div>
-                        <div>(5) <InlineMath math="\int \sin^n x \,dx = \frac{1}{n} [- \sin^{n-1} x \cos x + (n-1) \int \sin^{n-2} x \,dx] +  + C" /></div>
+                        <div>(5) <InlineMath math="\int \sin^n x \,dx = \frac{1}{n} [- \sin^{n-1} x \cos x + (n-1) \int \sin^{n-2} x \,dx] + C" /></div>
                       </div>
                     </div>
                   </div>
@@ -57,10 +57,37 @@ export default function AdvancedFormulas() {
               </tr>
               {/* 正餘弦函數乘積次幂積分 */}
               <tr className="hover:bg-rose-50/50 transition-colors">
-                <td className="py-3 px-4 border border-rose-200 font-semibold">
+                <td className="py-3 px-4 border border-rose-200 font-semibold align-top">
                   <InlineMath math="\int \sin^m x \cos^n x \,dx" />
                 </td>
-                <td className="py-3 px-4 border border-rose-200"></td>
+                <td className="py-3 px-4 border border-rose-200">
+                  <div className="space-y-4">
+                    <div className="bg-white p-3 rounded border border-rose-100 shadow-sm text-sm space-y-4">
+                      <div className="flex items-start">
+                        <div className="font-semibold text-rose-800 w-7 shrink-0">(1)</div>
+                        <div className="flex-1">
+                          <div className="font-semibold text-rose-800 mb-1"><InlineMath math="m" /> 與 <InlineMath math="n" /> 至少有一個為正奇數，其他為任何數。</div>
+                          <div className="space-y-1 text-gray-700">
+                            <div className="font-medium text-gray-500">解題工具</div>
+                            <div>(a) <InlineMath math="\sin^2 x + \cos^2 x = 1" /></div>
+                            <div>(b) 代換積分法。</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="font-semibold text-rose-800 w-7 shrink-0">(2)</div>
+                        <div className="flex-1">
+                          <div className="font-semibold text-rose-800 mb-1"><InlineMath math="m" /> 與 <InlineMath math="n" /> 均為正偶數 (降次)</div>
+                          <div className="space-y-1 text-gray-700">
+                            <div className="font-medium text-gray-500">解題工具</div>
+                            <div>(a) <InlineMath math="\sin^2 x = \frac{1 - \cos 2x}{2}" /></div>
+                            <div>(b) <InlineMath math="\cos^2 x = \frac{1 + \cos 2x}{2}" /></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
               </tr>
               {/* 正切函數次幂積分 */}
               <tr className="hover:bg-rose-50/50 transition-colors">
@@ -100,10 +127,37 @@ export default function AdvancedFormulas() {
               </tr>
               {/* 正切與正割乘積次幂積分 */}
               <tr className="hover:bg-rose-50/50 transition-colors">
-                <td className="py-3 px-4 border border-rose-200 font-semibold">
+                <td className="py-3 px-4 border border-rose-200 font-semibold align-top">
                   <InlineMath math="\int \tan^m x \sec^n x \,dx" />
                 </td>
-                <td className="py-3 px-4 border border-rose-200"></td>
+                <td className="py-3 px-4 border border-rose-200">
+                  <div className="space-y-4">
+                    <div className="bg-white p-3 rounded border border-rose-100 shadow-sm text-sm space-y-4">
+                      <div className="flex items-start">
+                        <div className="font-semibold text-rose-800 w-7 shrink-0">(1)</div>
+                        <div className="flex-1">
+                          <div className="font-semibold text-rose-800 mb-1"><InlineMath math="m" /> 為正奇數，<InlineMath math="n" /> 為任何數。</div>
+                          <div className="space-y-1 text-gray-700">
+                            <div className="font-medium text-gray-500">解題工具</div>
+                            <div>(a) <InlineMath math="\tan^2 x = \sec^2 x - 1" /></div>
+                            <div>(b) 代換積分法 <InlineMath math="d \sec x = \sec x \cdot \tan x \,dx" /> 。</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="font-semibold text-rose-800 w-7 shrink-0">(2)</div>
+                        <div className="flex-1">
+                          <div className="font-semibold text-rose-800 mb-1"><InlineMath math="n" /> 為正偶數，<InlineMath math="m" /> 為任何數。</div>
+                          <div className="space-y-1 text-gray-700">
+                            <div className="font-medium text-gray-500">解題工具</div>
+                            <div>(a) <InlineMath math="\sec^2 x = 1 + \tan^2 x" /></div>
+                            <div>(b) 代換積分法 <InlineMath math="d \tan x = \sec^2 x \,dx" /> 。</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
               </tr>
             </tbody>
           </table>
