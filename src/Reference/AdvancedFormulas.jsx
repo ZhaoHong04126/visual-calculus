@@ -26,12 +26,12 @@ export default function AdvancedFormulas() {
                 <td className="py-3 px-4 border border-rose-200">
                   <div className="space-y-4">
                     <div className="bg-white p-3 rounded border border-rose-100 shadow-sm">
-                      <div className="font-bold text-rose-700 mb-2">以 <InlineMath math="\int \sin^n x \,dx" /> 為例 (n=1~4)：</div>
                       <div className="text-sm space-y-2">
                         <div>(1) <InlineMath math="\int \sin x \,dx = - \cos x + C" /></div>
                         <div>(2) <InlineMath math="\int \sin^2 x \,dx =  \frac{1}{2}x - \frac{1}{4}\sin 2x + C" /></div>
                         <div>(3) <InlineMath math="\int \sin^3 x \,dx = \frac{1}{3} \cos ^3 x \, -\cos x + C" /></div>
                         <div>(4) <InlineMath math="\int \sin^4 x \,dx = \frac{3}{8} x \, - \frac{1}{4} \sin 2x \, + \frac{1}{32} \sin 4x + C" /></div>
+                        <div>(5) <InlineMath math="\int \sin^n x \,dx = \frac{1}{n} [- \sin^{n-1} x \cos x + (n-1) \int \sin^{n-2} x \,dx] +  + C" /></div>
                       </div>
                     </div>
                   </div>
@@ -45,7 +45,6 @@ export default function AdvancedFormulas() {
                 <td className="py-3 px-4 border border-rose-200">
                   <div className="space-y-4">
                     <div className="bg-white p-3 rounded border border-rose-100 shadow-sm">
-                      <div className="font-bold text-rose-700 mb-2">以 <InlineMath math="\int \cos^n x \,dx" /> 為例 (n=1~4)：</div>
                       <div className="text-sm space-y-2">
                         <div>(1) <InlineMath math="\int \cos x \,dx = \sin x + C" /></div>
                         <div>(2) <InlineMath math="\int \cos^2 x \,dx = \frac{1}{2}x + \frac{1}{4}\sin 2x + C" /></div>
@@ -68,16 +67,38 @@ export default function AdvancedFormulas() {
                 <td className="py-3 px-4 border border-rose-200 font-semibold">
                   <InlineMath math="\int \tan^n x \,dx" />
                 </td>
-                <td className="py-3 px-4 border border-rose-200"></td>
+                <td className="py-3 px-4 border border-rose-200">
+                  <div className="space-y-4">
+                    <div className="bg-white p-3 rounded border border-rose-100 shadow-sm">
+                      <div className="text-sm space-y-2">
+                        <div>(1) <InlineMath math="\int \tan x \,dx = \ln |\sec x| + C = -\ln |\cos x| + C" /></div>
+                        <div>(2) <InlineMath math="\int \tan^2 x \,dx = tan x - x + C" /></div>
+                        <div>(3) <InlineMath math="\int \tan^3 x \,dx = \frac{1}{2}\tan^2 x - \ln |\sec x| + C" /></div>
+                        <div>(4) <InlineMath math="\int \tan^4 x \,dx = \frac{1}{3}\tan^3 x - \tan x + x + C" /></div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
               </tr>
               {/* 正割函數次幂積分 */}
               <tr className="hover:bg-rose-50/50 transition-colors">
                 <td className="py-3 px-4 border border-rose-200 font-semibold">
                   <InlineMath math="\int \sec^n x \,dx" />
                 </td>
-                <td className="py-3 px-4 border border-rose-200"></td>
+                <td className="py-3 px-4 border border-rose-200">
+                  <div className="space-y-4">
+                    <div className="bg-white p-3 rounded border border-rose-100 shadow-sm">
+                      <div className="text-sm space-y-2">
+                        <div>(1) <InlineMath math="\int \sec x \,dx = \ln |\sec x + \tan x| + C" /></div>
+                        <div>(2) <InlineMath math="\int \sec^2 x \,dx = \tan x + C" /></div>
+                        <div>(3) <InlineMath math="\int \sec^3 x \,dx = \frac{1}{2}\sec x \tan x + \frac{1}{2}\ln |\sec x + \tan x| + C" /></div>
+                        <div>(4) <InlineMath math="\int \sec^4 x \,dx = \frac{1}{3}\tan^3 x + \tan x + C" /></div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
               </tr>
-              {/* 正切函數與正割函數乘積次幂積分 */}
+              {/* 正切與正割乘積次幂積分 */}
               <tr className="hover:bg-rose-50/50 transition-colors">
                 <td className="py-3 px-4 border border-rose-200 font-semibold">
                   <InlineMath math="\int \tan^m x \sec^n x \,dx" />
